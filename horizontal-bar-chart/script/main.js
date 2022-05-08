@@ -2,7 +2,7 @@ import {
   barChart
 } from './chart.js';
 
-const data = await d3.dsv(',', '../data/alphabet.csv')
+const data = await d3.dsv(',', '../data/alphabet.csv');
 
 barChart(data, {
   x: d => d.frequency,
@@ -11,4 +11,4 @@ barChart(data, {
   xFormat: '%',
   xLabel: 'Frequency',
   color: 'steelblue'
-})
+});

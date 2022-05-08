@@ -55,7 +55,9 @@ export const barChart = (data, {
     title = i => T(O[i], i, data);
   }
 
-  const svg = d3.select('#svg-area').append('svg')
+  d3.select('body').select('svg').remove()
+
+  const svg = d3.select('body').append('svg')
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])
