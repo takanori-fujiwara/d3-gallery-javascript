@@ -15,7 +15,7 @@ So far, several examples categorized in "Bars" are implemented. More examples wi
 ## Motivation
 One of biggest strengths of D3 is in its example gallery.
 This gallery makes (or used to make) trying various visualizations with D3 easier.
-However, in my opinion, integrating D3 into Observable (although Observable is a great interactive environment) makes using D3 examples directly in JavaScript code (much more) difficult. (I generally agree with this post: https://talk.observablehq.com/t/i-want-to-learn-d3-i-don-t-want-to-learn-observable-is-that-ok/1957/35. Unlike Python in Jupyter Notebook, we cannot make runnable code by copying-and-pasting from Observable code.)
+However, in my opinion, integrating D3 into Observable (although Observable is a great interactive environment) makes using D3 examples directly in JavaScript code (much more) difficult. (I generally agree with [this post](https://talk.observablehq.com/t/i-want-to-learn-d3-i-don-t-want-to-learn-observable-is-that-ok). Unlike Python in Jupyter Notebook, we cannot make runnable code by copying-and-pasting from Observable code.)
 
 While there is an example of how to convert Observable code to vanilla JavaScript, at least for me (as a researcher studying visualization several years), the conversion is still time-consuming.
 Also, there is a way to embed Observable code, but, this might be not preferable in some situations (e.g., to avoid additional dependency to Observable).
