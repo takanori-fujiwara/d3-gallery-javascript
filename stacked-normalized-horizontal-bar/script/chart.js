@@ -27,7 +27,7 @@ export const stackedBarChart = (data, {
   zDomain, // array of z-values
   offset = d3.stackOffsetExpand, // stack offset method
   order = d3.stackOrderNone, // stack order method
-  xFormat = "%", // a format specifier string for the x-axis
+  xFormat = '%', // a format specifier string for the x-axis
   xLabel, // a label for the x-axis
   colors = d3.schemeTableau10, // array of colors
 } = {}) => {
@@ -86,46 +86,46 @@ export const stackedBarChart = (data, {
   d3.select('body').select('svg').remove();
 
   const svg = d3.select('body').append('svg')
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [0, 0, width, height])
-    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .attr('style', 'max-width: 100%; height: auto; height: intrinsic;');
 
-  const bar = svg.append("g")
-    .selectAll("g")
+  const bar = svg.append('g')
+    .selectAll('g')
     .data(series)
-    .join("g")
-    .attr("fill", ([{
+    .join('g')
+    .attr('fill', ([{
       i
     }]) => color(Z[i]))
-    .selectAll("rect")
+    .selectAll('rect')
     .data(d => d)
-    .join("rect")
-    .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
-    .attr("y", ({
+    .join('rect')
+    .attr('x', ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
+    .attr('y', ({
       i
     }) => yScale(Y[i]))
-    .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
-    .attr("height", yScale.bandwidth());
+    .attr('width', ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
+    .attr('height', yScale.bandwidth());
 
-  if (title) bar.append("title")
+  if (title) bar.append('title')
     .text(({
       i
     }) => title(i));
 
-  svg.append("g")
-    .attr("transform", `translate(0,${marginTop})`)
+  svg.append('g')
+    .attr('transform', `translate(0,${marginTop})`)
     .call(xAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.append("text")
-      .attr("x", width - marginRight)
-      .attr("y", -22)
-      .attr("fill", "currentColor")
-      .attr("text-anchor", "end")
+    .call(g => g.select('.domain').remove())
+    .call(g => g.append('text')
+      .attr('x', width - marginRight)
+      .attr('y', -22)
+      .attr('fill', 'currentColor')
+      .attr('text-anchor', 'end')
       .text(xLabel));
 
-  svg.append("g")
-    .attr("transform", `translate(${xScale(0)},0)`)
+  svg.append('g')
+    .attr('transform', `translate(${xScale(0)},0)`)
     .call(yAxis);
 
   return Object.assign(svg.node(), {
