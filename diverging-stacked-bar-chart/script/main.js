@@ -50,7 +50,7 @@ const rulings = {
 
 // The PoltiFact data includes categories we don’t want to consider (namely
 // full-flop, which isn’t really true or false), so filter.
-const data = (await d3.csv('../data/politifact.csv')).filter(d => d.ruling in rulings);;
+const data = (await d3.csv('./data/politifact.csv')).filter(d => d.ruling in rulings);;
 
 // Compute the total number of rulings for each speaker.
 const total = d3.rollup(data, D => d3.sum(D, d => d.count), d => d.speaker);

@@ -5,7 +5,7 @@ import {
   chart
 } from './chart.js';
 
-const data = (await d3.csv('../data/sales.csv')).map(({
+const data = (await d3.csv('./data/sales.csv')).map(({
   market,
   segment,
   value

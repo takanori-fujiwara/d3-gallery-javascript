@@ -6,7 +6,7 @@ import {
   legend
 } from './legend.js';
 
-const states = await d3.csv('../data/us-population-state-age.csv');
+const states = await d3.csv('./data/us-population-state-age.csv');
 const ages = states.columns.slice(1);
 const stateages = ages.flatMap(age => states.map(d => ({
   state: d.name,

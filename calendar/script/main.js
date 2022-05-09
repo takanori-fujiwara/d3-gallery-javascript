@@ -25,7 +25,7 @@ const options = select.selectAll('option')
   .text(d => d[0])
   .attr('value', d => d[1]);
 
-const data = await d3.csv('../data/^DJI@2.csv', d3.autoType);
+const data = await d3.csv('./data/^DJI@2.csv', d3.autoType);
 
 const updateCalendar1 = (weekday) => {
   const chart = calendar(data, {
