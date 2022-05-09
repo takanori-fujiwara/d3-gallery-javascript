@@ -3,6 +3,7 @@ This repository aims to covert all observable examples (https://observablehq.com
 
 ## Note
 So far, several examples categorized in "Bars" are implemented. More examples will be implemented gradually.
+Also, only the examples with with license declaration will be implemented. 
 
 ## How to try example code
 * Run some http server and load each directory's index.html

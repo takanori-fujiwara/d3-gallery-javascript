@@ -1,4 +1,4 @@
-/// Moridied source copyright
+/// Modified source copyright
 // Copyright 2022 Takanori Fujiwara.
 // Released under the BSD 3-Clause 'New' or 'Revised' License
 
@@ -7,6 +7,7 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/color-legend
 export const legend = (color, {
+  id = 'legend',
   title,
   tickSize = 6,
   width = 320,
@@ -31,7 +32,10 @@ export const legend = (color, {
     return canvas;
   }
 
+  d3.select('body').select(`svg#${id}`).remove();
+
   const svg = d3.select('body').append('svg')
+    .attr('id', id)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

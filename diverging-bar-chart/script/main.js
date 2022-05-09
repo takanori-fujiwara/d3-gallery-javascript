@@ -32,11 +32,13 @@ const updateChart = (metric) => {
     marginLeft: 70,
     height: 800,
     colors: d3.schemeRdBu[3]
-  })
+  });
 }
 
+// initial state
 updateChart(d3.select('input[name="metric"]:checked').node().value);
 
-buttons.on('change', function(d) {
-  updateChart(d3.select('input[name="metric"]:checked').node().value)
+// when updated
+buttons.on('change', () => {
+  updateChart(d3.select('input[name="metric"]:checked').node().value);
 });
