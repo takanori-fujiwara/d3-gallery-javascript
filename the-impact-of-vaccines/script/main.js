@@ -17,7 +17,7 @@
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 import {
-  chart
+  vaccineChart
 } from './chart.js';
 
 import {
@@ -52,4 +52,11 @@ const vaccineData = await fetch('./data/vaccines.json')
   });
 
 
-chart(vaccineData);
+const chart = vaccineChart(vaccineData);
+
+legend(
+  chart.scales.color, {
+    title: "Measles cases per 100,000 people",
+    width: 360,
+    marginLeft: 30
+  })

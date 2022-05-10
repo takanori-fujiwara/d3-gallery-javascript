@@ -17,7 +17,7 @@
 // ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-export const chart = (data, {
+export const vaccineChart = (data, {
   id = 'chart',
   width = 900,
   height = 500,
@@ -98,5 +98,9 @@ export const chart = (data, {
     .append('title')
     .text((d, i) => `${format(d)} per 100,000 people in ${data.years[i]}`);
 
-  return svg.node();
+  return Object.assign(svg.node(), {
+    scales: {
+      color
+    }
+  });
 }
