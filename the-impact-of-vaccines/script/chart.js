@@ -18,7 +18,7 @@
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 export const vaccineChart = (data, {
-  id = 'chart',
+  id = 'vaccine-chart',
   width = 900,
   height = 500,
   marginTop = 20,
