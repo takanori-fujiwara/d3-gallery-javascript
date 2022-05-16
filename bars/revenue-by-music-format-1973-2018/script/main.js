@@ -6,7 +6,7 @@ import {
 } from './chart.js';
 
 import {
-  legend
+  swatches
 } from './legend.js';
 
 const musicData = await fetch('./data/music.csv')
@@ -26,8 +26,10 @@ const musicData = await fetch('./data/music.csv')
 const chart = musicChart(musicData);
 
 // TODO: implement swatches
-legend(
+swatches(
   chart.scales.color, {
-    width: 4000,
+    width: 1000,
+    nColumns: 6,
+    textWidth: 250,
     marginLeft: 30
   })

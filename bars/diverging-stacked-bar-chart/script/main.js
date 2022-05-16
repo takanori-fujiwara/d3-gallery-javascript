@@ -12,7 +12,7 @@ import {
 } from './chart.js';
 
 import {
-  legend
+  swatches
 } from './legend.js';
 
 const politifact = await fetch('./data/politifact.csv')
@@ -85,4 +85,4 @@ const chart = stackedBarChart(politifact, {
 });
 
 // TODO: implement "swatches"
-legend(chart.scales.color)
+swatches(chart.scales.color)
