@@ -84,5 +84,4 @@ const chart = stackedBarChart(politifact, {
   marginLeft: 70
 });
 
-// TODO: implement "swatches"
 swatches(chart.scales.color)

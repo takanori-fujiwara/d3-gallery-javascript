@@ -5,13 +5,14 @@
 /// Original source copyright
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
-// https://observablehq.com/@d3/area-chart
+// https://observablehq.com/@d3/band-chart
 
-export const areaChart = (data, {
-  id = 'area-chart',
+export const bandChart = (data, {
+  id = 'band-chart',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
-  y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
-  defined, // given d in data, returns true if defined (for gaps)
+  y1 = () => 0, // given d in data, returns the (quantitative) low value
+  y2 = ([, y]) => y, // given d in data, returns the (quantitative) high value
+  defined, // for gaps in data
   curve = d3.curveLinear, // method of interpolation between points
   marginTop = 20, // top margin, in pixels
   marginRight = 30, // right margin, in pixels
@@ -31,16 +32,15 @@ export const areaChart = (data, {
 } = {}) => {
   // Compute values.
   const X = d3.map(data, x);
-  const Y = d3.map(data, y);
+  const Y1 = d3.map(data, y1);
+  const Y2 = d3.map(data, y2);
   const I = d3.range(X.length);
-
-  // Compute which data points are considered defined.
-  if (defined === undefined) defined = (d, i) => !isNaN(X[i]) && !isNaN(Y[i]);
+  if (defined === undefined) defined = (d, i) => !isNaN(X[i]) && !isNaN(Y1[i]) && !isNaN(Y2[i]);
   const D = d3.map(data, defined);
 
   // Compute default domains.
   if (xDomain === undefined) xDomain = d3.extent(X);
-  if (yDomain === undefined) yDomain = [0, d3.max(Y)];
+  if (yDomain === undefined) yDomain = d3.nice(...d3.extent([...Y1, ...Y2]), 10);
 
   // Construct scales and axes.
   const xScale = xType(xDomain, xRange);
@@ -53,8 +53,8 @@ export const areaChart = (data, {
     .defined(i => D[i])
     .curve(curve)
     .x(i => xScale(X[i]))
-    .y0(yScale(0))
-    .y1(i => yScale(Y[i]));
+    .y0(i => yScale(Y1[i]))
+    .y1(i => yScale(Y2[i]));
 
   d3.select('body').select(`svg#${id}`).remove();
 
@@ -85,7 +85,8 @@ export const areaChart = (data, {
 
   svg.append('g')
     .attr('transform', `translate(0,${height - marginBottom})`)
-    .call(xAxis);
+    .call(xAxis)
+    .call(g => g.select('.domain').remove());
 
   return svg.node();
 }

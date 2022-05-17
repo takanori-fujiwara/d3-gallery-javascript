@@ -80,6 +80,7 @@ High: ${formatValue(Yh[i])}`;
   d3.select('body').select(`svg#${id}`).remove();
 
   const svg = d3.select('body').append('svg')
+    .attr('id', id)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

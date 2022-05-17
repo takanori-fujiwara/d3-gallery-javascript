@@ -39,7 +39,7 @@ def load_info(dir_path):
 
     # extract 'head'
     for f_script in js_func_scripts:
-        head_mark = 'md`# '
+        head_mark = '# '
         if head_mark in f_script:
             info['head'] = f_script.split(head_mark)[1].split('\n')[0]
             break
@@ -182,7 +182,7 @@ def _convert_script_chart_func(var_name_chart_func, script_chart_func):
     # change d3 create to remove/append of svg
     script = script.replace(
         'const svg = d3.create("svg")',
-        'd3.select(\'body\').select(`svg#${id}`).remove();\n\n    const svg = d3.select(\'body\').append(\'svg\')'
+        'd3.select(\'body\').select(`svg#${id}`).remove();\n\n    const svg = d3.select(\'body\').append(\'svg\')\n    .attr(\'id\', id)'
     )
 
     # double quotes to single quotes

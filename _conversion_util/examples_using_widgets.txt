@@ -1,0 +1,5 @@
+bars - calender: dropdown
+bars - diverging-bar-chart: radio
+lines - change-line-chart: text + slider
+lines - multi-line-chart: checkbox
+areas - horizon-chart: dropdown, text + slider

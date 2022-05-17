@@ -9,7 +9,7 @@ import {
   legend
 } from './legend.js';
 
-const dropdown_data = new Map([
+const dropdownData = new Map([
   ["Weekdays only", "weekday"],
   ["Sunday-based weeks", "sunday"],
   ["Monday-based weeks", "monday"],
@@ -19,7 +19,7 @@ const select = d3.select('body').append('div').append('select');
 select.attr('id', 'weekday-selection')
 
 const options = select.selectAll('option')
-  .data(dropdown_data)
+  .data(dropdownData)
   .enter()
   .append('option')
   .text(d => d[0])

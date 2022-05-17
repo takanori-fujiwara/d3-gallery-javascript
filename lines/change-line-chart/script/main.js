@@ -12,8 +12,10 @@ const initVal = aapl[0].close;
 
 const inputArea = d3.select('body').append('div').text('Basis');
 const textInput = inputArea.insert('input')
-  .attr('type', 'text')
+  .attr('type', 'number')
   .attr('id', 'textInput')
+  .attr('min', minMax[0])
+  .attr('max', minMax[1])
   .attr('value', aapl[0].close);
 const sliderInput = inputArea.insert('input')
   .attr('type', 'range')
@@ -44,12 +46,12 @@ updateChart(initVal);
 textInput.on('input', () => {
   const newVal = d3.select('input[id="textInput"]').property('value');
   updateChart(newVal);
-  d3.select('input[id="textInput"]').attr('value', newVal);
-  d3.select('input[id="sliderInput"]').attr('value', newVal);
+  d3.select('input[id="textInput"]').property('value', newVal);
+  d3.select('input[id="sliderInput"]').property('value', newVal);
 });
 sliderInput.on('input', () => {
   const newVal = d3.select('input[id="sliderInput"]').property('value');
   updateChart(newVal);
-  d3.select('input[id="textInput"]').attr('value', newVal);
-  d3.select('input[id="sliderInput"]').attr('value', newVal);
+  d3.select('input[id="textInput"]').property('value', newVal);
+  d3.select('input[id="sliderInput"]').property('value', newVal);
 });

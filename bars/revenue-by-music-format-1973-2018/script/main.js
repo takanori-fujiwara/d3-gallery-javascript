@@ -25,7 +25,6 @@ const musicData = await fetch('./data/music.csv')
 
 const chart = musicChart(musicData);
 
-// TODO: implement swatches
 swatches(
   chart.scales.color, {
     width: 1000,
