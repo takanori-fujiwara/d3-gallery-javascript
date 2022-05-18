@@ -1,9 +1,6 @@
 // Copyright 2022 Takanori Fujiwara.
 // Released under the BSD 3-Clause 'New' or 'Revised' License
 
-// Copyright 2022 Takanori Fujiwara.
-// Released under the BSD 3-Clause 'New' or 'Revised' License
-
 import {
   horizonChart
 } from './chart.js';
@@ -74,7 +71,7 @@ const updateChart = (bands, scheme) => {
 }
 
 // initial state
-updateChart(7, initScheme);
+updateChart(initBands, initScheme);
 
 // when updated
 textInput.on('input', () => {
