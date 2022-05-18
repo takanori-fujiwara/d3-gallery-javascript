@@ -5,3 +5,4 @@ lines - multi-line-chart: checkbox
 areas - horizon-chart: dropdown, text + slider
 dots - dot-plot: dropdown, interval trigger
 networks - sankey: dropdown
+hierarchies - treemap: dropdown
