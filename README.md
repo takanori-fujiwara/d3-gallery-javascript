@@ -2,7 +2,7 @@
 This repository aims to covert all observable examples (https://observablehq.com/@d3/gallery) to JavaScript code to make them runnable with vanilla JavaScript.
 
 ## Note
-So far, all examples categorized in "Bars" and some examples in "Lines" are implemented.
+So far, all examples categorized in "Bars" and some examples in other categories are implemented.
 More examples will be implemented gradually.
 Also, only the examples with license declaration will be implemented.
 
