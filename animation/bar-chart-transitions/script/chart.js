@@ -48,7 +48,24 @@ export const barChart = (data, {
   const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
   const format = yScale.tickFormat(100, yFormat);
 
+  // A helper method for updating the position of bars.
+  const position = (rect, x, y) =>
+    rect
+    .attr('x', x)
+    .attr('y', y)
+    .attr('height', typeof y === 'function' ? i => yScale(0) - y(i) : i => yScale(0) - y)
+    .attr('width', xScale.bandwidth());
+
   d3.select('body').select(`svg#${id}`).remove();
+
+
+  // A helper method for generating grid lines on the y-axis.
+  const grid = tick =>
+    tick.append('line')
+    .attr('class', 'grid')
+    .attr('x2', width - marginLeft - marginRight)
+    .attr('stroke', 'currentColor')
+    .attr('stroke-opacity', 0.1);
 
   const svg = d3.select('body').append('svg')
     .attr('id', id)
@@ -83,24 +100,6 @@ export const barChart = (data, {
   const xGroup = svg.append('g')
     .attr('transform', `translate(0,${height - marginBottom})`)
     .call(xAxis);
-
-  // A helper method for updating the position of bars.
-  function position(rect, x, y) {
-    return rect
-      .attr('x', x)
-      .attr('y', y)
-      .attr('height', typeof y === 'function' ? i => yScale(0) - y(i) : i => yScale(0) - y)
-      .attr('width', xScale.bandwidth());
-  }
-
-  // A helper method for generating grid lines on the y-axis.
-  function grid(tick) {
-    return tick.append('line')
-      .attr('class', 'grid')
-      .attr('x2', width - marginLeft - marginRight)
-      .attr('stroke', 'currentColor')
-      .attr('stroke-opacity', 0.1);
-  }
 
   // Call chart.update(data, options) to transition to new data.
   return Object.assign(svg.node(), {

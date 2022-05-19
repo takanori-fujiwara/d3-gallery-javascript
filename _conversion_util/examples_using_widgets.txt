@@ -7,3 +7,5 @@ dots - dot-plot: dropdown, interval trigger
 networks - sankey: dropdown
 hierarchies - treemap: dropdown
 animation - connected-scatterplot: push button
+animation - bar-chart-transitions: interval trigger
+interaction - index-chart: interval trigger
