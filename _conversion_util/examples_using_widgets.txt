@@ -9,3 +9,4 @@ hierarchies - treemap: dropdown
 animation - connected-scatterplot: push button
 animation - bar-chart-transitions: interval trigger
 interaction - index-chart: interval trigger
+analysis - bollinger-bands: text + slider

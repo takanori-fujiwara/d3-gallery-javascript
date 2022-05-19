@@ -56,9 +56,6 @@ export const barChart = (data, {
     .attr('height', typeof y === 'function' ? i => yScale(0) - y(i) : i => yScale(0) - y)
     .attr('width', xScale.bandwidth());
 
-  d3.select('body').select(`svg#${id}`).remove();
-
-
   // A helper method for generating grid lines on the y-axis.
   const grid = tick =>
     tick.append('line')
@@ -66,6 +63,8 @@ export const barChart = (data, {
     .attr('x2', width - marginLeft - marginRight)
     .attr('stroke', 'currentColor')
     .attr('stroke-opacity', 0.1);
+
+  d3.select('body').select(`svg#${id}`).remove();
 
   const svg = d3.select('body').append('svg')
     .attr('id', id)
