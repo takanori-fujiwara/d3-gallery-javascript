@@ -11,7 +11,7 @@ export const forceGraph = ({
   nodes, // an iterable of node objects (typically [{id}, …])
   links // an iterable of link objects (typically [{source, target}, …])
 }, {
-  id = 'force-graph',
+  svgId = 'force-graph',
   nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
   nodeGroup, // given d in nodes, returns an (ordinal) value for color
   nodeGroups, // an array of ordinal values representing the node groups
@@ -72,10 +72,10 @@ export const forceGraph = ({
   if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
   if (linkStrength !== undefined) forceLink.strength(linkStrength);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [-width / 2, -height / 2, width, height])

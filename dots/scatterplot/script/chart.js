@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/scatterplot
 
 export const scatterplot = (data, {
-  id = 'scatterplot',
+  svgId = 'scatterplot',
   x = ([x]) => x, // given d in data, returns the (quantitative) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   r = 3, // (fixed) radius of dots, in pixels
@@ -37,7 +37,7 @@ export const scatterplot = (data, {
   fill = 'none', // fill color for dots
   stroke = 'currentColor', // stroke color for the dots
   strokeWidth = 1.5, // stroke width for dots
-  halo = '#fff', // color of label halo 
+  halo = '#fff', // color of label halo
   haloWidth = 3 // padding around the labels
 } = {}) => {
   // Compute values.
@@ -56,10 +56,10 @@ export const scatterplot = (data, {
   const xAxis = d3.axisBottom(xScale).ticks(width / 80, xFormat);
   const yAxis = d3.axisLeft(yScale).ticks(height / 50, yFormat);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/beeswarm
 
 export const beeswarmChart = (data, {
-  id = 'beeswarm-chart',
+  svgId = 'beeswarm-chart',
   value = d => d, // convenience alias for x
   label, // convenience alias for xLabel
   type = d3.scaleLinear, // convenience alias for xType
@@ -103,10 +103,10 @@ export const beeswarmChart = (data, {
   // Compute the default height;
   if (height === undefined) height = d3.max(Y) + (radius + padding) * 2 + marginTop + marginBottom;
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

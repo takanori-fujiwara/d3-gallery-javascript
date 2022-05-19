@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/index-chart
 
 export const indexChart = (data, {
-  id = 'index-chart',
+  svgId = 'index-chart',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   z = () => 1, // given d in data, returns the (categorical) z-value for series
@@ -73,10 +73,10 @@ export const indexChart = (data, {
     .x(i => xScale(X[i]))
     .y((i, _, I) => yScale(Y[i] / Y[I[0]]));
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

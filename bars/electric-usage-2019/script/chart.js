@@ -18,7 +18,7 @@
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 export const electricChart = (data, {
-  id = 'electric-chart',
+  svgId = 'electric-chart',
   width = 900,
   height = 3700,
   marginTop = 30,
@@ -62,10 +62,10 @@ export const electricChart = (data, {
       `${f(d)} cases`;
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr("viewBox", [0, 0, width, height])
     .style("background", "white");
 

@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/calendar-view
 
 export const calendar = (data, {
-  id = 'calendar',
+  svgId = 'calendar',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   title, // given d in data, returns the title text
@@ -38,7 +38,6 @@ export const calendar = (data, {
   // Construct formats.
   formatMonth = d3.utcFormat(formatMonth);
 
-  console.log(X[0]);
   // Compute titles.
   if (title === undefined) {
     const formatDate = d3.utcFormat('%B %-d, %Y');
@@ -61,10 +60,10 @@ export const calendar = (data, {
         : `M${(w + 1) * cellSize},0V${d * cellSize}H${w * cellSize}`}V${weekDays * cellSize}`;
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height * years.length)
     .attr('viewBox', [0, 0, width, height * years.length])

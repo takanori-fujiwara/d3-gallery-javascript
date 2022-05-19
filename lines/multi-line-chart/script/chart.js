@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/multi-line-chart
 
 export const lineChart = (data, {
-  id = 'line-chart',
+  svgId = 'line-chart',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   z = () => 1, // given d in data, returns the (categorical) z-value
@@ -71,6 +71,16 @@ export const lineChart = (data, {
     .x(i => xScale(X[i]))
     .y(i => yScale(Y[i]));
 
+  d3.select('body').select(`svg#${svgId}`).remove();
+
+  const svg = d3.select('body').append('svg')
+    .attr('id', svgId)
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .attr('style', 'max-width: 100%; height: auto; height: intrinsic;')
+    .style('-webkit-tap-highlight-color', 'transparent');
+
   const pointermoved = (event) => {
     const [xm, ym] = d3.pointer(event);
     const i = d3.least(I, i => Math.hypot(xScale(X[i]) - xm, yScale(Y[i]) - ym)); // closest point
@@ -96,15 +106,7 @@ export const lineChart = (data, {
     });
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
-
-  const svg = d3.select('body').append('svg')
-    .attr('id', id)
-    .attr('width', width)
-    .attr('height', height)
-    .attr('viewBox', [0, 0, width, height])
-    .attr('style', 'max-width: 100%; height: auto; height: intrinsic;')
-    .style('-webkit-tap-highlight-color', 'transparent')
+  svg
     .on('pointerenter', pointerentered)
     .on('pointermove', pointermoved)
     .on('pointerleave', pointerleft)

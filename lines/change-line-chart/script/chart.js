@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/change-line-chart
 
 export const changeLineChart = (data, {
-  id = 'line-chart',
+  svgId = 'line-chart',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   basis, // the basis value; defaults to the first y-value
@@ -61,10 +61,10 @@ export const changeLineChart = (data, {
     .curve(curve)
     .x(i => xScale(X[i]))
     .y(i => yScale(Y[i]));
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr("width", width)
     .attr("height", height)
     .attr("viewBox", [0, 0, width, height])

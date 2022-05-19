@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/bollinger-bands
 
 export const bollingerChart = (data, {
-  id = 'bollinger-chart',
+  svgId = 'bollinger-chart',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   N = 20, // number of periods for rolling mean
@@ -76,10 +76,10 @@ export const bollingerChart = (data, {
     };
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

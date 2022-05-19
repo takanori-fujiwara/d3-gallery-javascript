@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/marimekko-chart
 
 export const chart = (data, {
-  id = 'chart',
+  svgId = 'chart',
   width = 1000,
   height = 800,
   margin = {
@@ -37,10 +37,10 @@ export const chart = (data, {
 
   const root = treemap(data);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

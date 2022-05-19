@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/diverging-stacked-bar-chart
 
 export const stackedBarChart = (data, {
-  id = 'stacked-bar-chart',
+  svgId = 'stacked-bar-chart',
   x = d => d, // given d in data, returns the (quantitative) x-value
   y = (d, i) => i, // given d in data, returns the (ordinal) y-value
   z = () => 1, // given d in data, returns the (categorical) z-value
@@ -90,10 +90,10 @@ export const stackedBarChart = (data, {
     title = i => T(O[i], i, data);
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr("width", width)
     .attr("height", height)
     .attr("viewBox", [0, 0, width, height])

@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/spike-map
 
 export const spikeMap = (data, {
-  id = 'spike-map',
+  svgId = 'spike-map',
   position = d => d, // given d in data, returns the [longitude, latitude]
   value = () => undefined, // given d in data, returns the quantitative value
   title, // given a datum d, returns the hover text
@@ -70,10 +70,10 @@ export const spikeMap = (data, {
   // Construct a path generator.
   const path = d3.geoPath(projection);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

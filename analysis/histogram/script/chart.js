@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/histogram
 
 export const histogram = (data, {
-  id = 'histogram',
+  svgId = 'histogram',
   value = d => d, // convenience alias for x
   domain, // convenience alias for xDomain
   label, // convenience alias for xLabel
@@ -62,10 +62,10 @@ export const histogram = (data, {
   const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
   yFormat = yScale.tickFormat(100, yFormat);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

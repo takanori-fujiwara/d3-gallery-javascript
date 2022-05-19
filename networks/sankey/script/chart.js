@@ -11,7 +11,7 @@ export const sankeyChart = ({
   nodes, // an iterable of node objects (typically [{id}, …]); implied by links if missing
   links // an iterable of link objects (typically [{source, target}, …])
 }, {
-  id = 'sankey-chart',
+  svgId = 'sankey-chart',
   format = ',', // a function or format specifier for values in titles
   align = 'justify', // convenience shorthand for nodeAlign
   nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
@@ -54,7 +54,7 @@ export const sankeyChart = ({
     left: d3.sankeyLeft,
     right: d3.sankeyRight,
     center: d3.sankeyCenter
-  } [nodeAlign] ?? d3.sankeyJustify;
+  } [nodeAlign] ? ? d3.sankeyJustify;
 
   // Compute values.
   const LS = d3.map(links, linkSource).map(intern);
@@ -111,10 +111,10 @@ export const sankeyChart = ({
   // A unique identifier for clip paths (to avoid conflicts).
   const uid = `O-${Math.random().toString(16).slice(2)}`;
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

@@ -13,7 +13,7 @@ import {
 
 // first simple example
 wordCloud('Hello, World! This is a small cloud for your enjoyment', {
-  id: 'word-cloud-1',
+  svgId: 'word-cloud-1',
   width: 250,
   height: 100,
   size: () => .3 + Math.random(),
@@ -44,7 +44,7 @@ const optimizationTimeout = () => new Promise((resolve, reject) => {
 });
 
 wordCloud(words, {
-  id: 'word-cloud-2',
+  svgId: 'word-cloud-2',
   width: 1200,
   height: 500,
   invalidation: optimizationTimeout // a promise to stop the simulation when the cell is re-run

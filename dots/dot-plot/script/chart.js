@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/dot-plot
 
 export const dotPlot = (data, {
-  id = 'dot-plot',
+  svgId = 'dot-plot',
   x = ([x]) => x, // given d in data, returns the (quantitative) value x
   y = ([, y]) => y, // given d in data, returns the (categorical) value y
   z = () => 1, // given d in data, returns the (categorical) value z
@@ -65,10 +65,10 @@ export const dotPlot = (data, {
   const color = d3.scaleOrdinal(zDomain, colors);
   const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

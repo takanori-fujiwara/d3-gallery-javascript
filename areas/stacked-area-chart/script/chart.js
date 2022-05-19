@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/stacked-area-chart
 
 export const stackedAreaChart = (data, {
-  id = 'stacked-area-chart',
+  svgId = 'stacked-area-chart',
   x = ([x]) => x, // given d in data, returns the (ordinal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   z = () => 1, // given d in data, returns the (categorical) z-value
@@ -77,10 +77,10 @@ export const stackedAreaChart = (data, {
     .y0(([y1]) => yScale(y1))
     .y1(([, y2]) => yScale(y2));
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

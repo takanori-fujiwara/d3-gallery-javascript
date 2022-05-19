@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/splom
 
 export const scatterplotMatrix = (data, {
-  id = 'scatterplot-matrix',
+  svgId = 'scatterplot-matrix',
   columns = data.columns, // array of column names, or accessor export consts
   x = columns, // array of x-accessors
   y = columns, // array of y-accessors
@@ -49,10 +49,10 @@ export const scatterplotMatrix = (data, {
   const xAxis = d3.axisBottom().ticks(cellWidth / 50);
   const yAxis = d3.axisLeft().ticks(cellHeight / 35);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [-marginLeft, -marginTop, width, height])

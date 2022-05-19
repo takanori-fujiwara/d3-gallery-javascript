@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/candlestick-chart
 
 export const candlestickChart = (data, {
-  id = 'candlestick-chart',
+  svgId = 'candlestick-chart',
   date = d => d.date, // given d in data, returns the (temporal) x-value
   open = d => d.open, // given d in data, returns a (quantitative) y-value
   close = d => d.close, // given d in data, returns a (quantitative) y-value
@@ -77,10 +77,10 @@ High: ${formatValue(Yh[i])}`;
     title = i => T[i];
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

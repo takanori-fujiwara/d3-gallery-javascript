@@ -177,12 +177,12 @@ def _convert_script_chart_func(var_name_chart_func, script_chart_func):
     script = script.replace(
         f'export const {_var_name_chart_func} = (data, {{\n',
         f'export const {_var_name_chart_func} = (data, {{\n' +
-        f'id = \'{svg_id}\',')
+        f'svgId = \'{svg_id}\',')
 
     # change d3 create to remove/append of svg
     script = script.replace(
         'const svg = d3.create("svg")',
-        'd3.select(\'body\').select(`svg#${id}`).remove();\n\n    const svg = d3.select(\'body\').append(\'svg\')\n    .attr(\'id\', id)'
+        'd3.select(\'body\').select(`svg#${svgId}`).remove();\n\n    const svg = d3.select(\'body\').append(\'svg\')\n    .attr(\'id\', svgId)'
     )
 
     # double quotes to single quotes

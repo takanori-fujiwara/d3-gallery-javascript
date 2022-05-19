@@ -7,7 +7,7 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/color-legend
 export const legend = (color, {
-  id = 'legend',
+  svgId = 'legend',
   title,
   tickSize = 6,
   width = 320,
@@ -32,10 +32,10 @@ export const legend = (color, {
     return canvas;
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

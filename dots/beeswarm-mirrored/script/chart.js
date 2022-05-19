@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/beeswarm-mirrored
 
 export const beeswarmChart = (data, {
-  id = 'beeswarm-chart',
+  svgId = 'beeswarm-chart',
   value = d => d, // convience alias for x
   label, // convenience alias for xLabel
   domain, // convenience alias for xDomain
@@ -97,10 +97,10 @@ export const beeswarmChart = (data, {
   // Compute the default height;
   if (height === undefined) height = (d3.max(Y, Math.abs) + radius + padding) * 2 + marginTop + marginBottom;
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

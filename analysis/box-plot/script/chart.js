@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/box-plot
 
 export const boxPlot = (data, {
-  id = 'box-plot',
+  svgId = 'box-plot',
   x = ([x]) => x, // given d in data, returns the (quantitative) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   width = 640, // outer width, in pixels
@@ -73,10 +73,10 @@ export const boxPlot = (data, {
   const xAxis = d3.axisBottom(xScale).ticks(thresholds, xFormat).tickSizeOuter(0);
   const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

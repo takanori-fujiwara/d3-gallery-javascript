@@ -8,6 +8,7 @@
 // https://observablehq.com/@d3/sunburst
 
 export const sunburst = (data, { // data is either tabular (array of objects) or hierarchy (nested objects)
+  svgId = 'sunburst',
   path, // as an alternative to id and parentId, returns an array identifier, imputing internal nodes
   id = Array.isArray(data) ? d => d.id : null, // if tabular data, given a d in data, returns a unique identifier (string)
   parentId = Array.isArray(data) ? d => d.parentId : null, // if tabular data, given a node d, returns its parent’s identifier
@@ -64,10 +65,10 @@ export const sunburst = (data, { // data is either tabular (array of objects) or
     .innerRadius(d => d.y0)
     .outerRadius(d => d.y1 - padding);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('viewBox', [
       marginRight - marginLeft - width / 2,
       marginBottom - marginTop - height / 2,

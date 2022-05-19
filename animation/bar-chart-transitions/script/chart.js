@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/bar-chart-transitions
 
 export const barChart = (data, {
-  id = 'bar-chart',
+  svgId = 'bar-chart',
   x = (d, i) => i, // given d in data, returns the (ordinal) x-value
   y = d => d, // given d in data, returns the (quantitative) y-value
   marginTop = 20, // the top margin, in pixels
@@ -64,10 +64,10 @@ export const barChart = (data, {
     .attr('stroke', 'currentColor')
     .attr('stroke-opacity', 0.1);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

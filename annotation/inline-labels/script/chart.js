@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/inline-labels
 
 export const inlineChart = (data, {
-  id = 'inline-chart',
+  svgId = 'inline-chart',
   x = ([x]) => x, // given d in data, returns the (temporal) x-value
   y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
   z = () => 1, // given d in data, returns the (categorical) z-value
@@ -33,7 +33,7 @@ export const inlineChart = (data, {
   strokeLinejoin = 'round', // stroke line join of the line
   strokeWidth = 1.5, // stroke width of line, in pixels
   strokeOpacity = 1, // stroke opacity of line
-  halo = '#fff', // color of label halo 
+  halo = '#fff', // color of label halo
   haloWidth = 6 // padding around the labels
 } = {}) => {
   // Compute values.
@@ -68,10 +68,10 @@ export const inlineChart = (data, {
     .x(i => xScale(X[i]))
     .y(i => yScale(Y[i]));
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])

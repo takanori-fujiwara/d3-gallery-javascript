@@ -29,7 +29,7 @@ const data = await d3.csv('./data/^DJI@2.csv', d3.autoType);
 
 const updateCalendar1 = (weekday) => {
   const chart = calendar(data, {
-    id: 'calendar1',
+    svgId: 'calendar1',
     x: d => d.Date,
     y: (d, i, data) => i > 0 ? (d.Close - data[i - 1].Close) / data[i - 1].Close : NaN, // relative change
     yFormat: "+%", // show percent change on hover
@@ -47,7 +47,7 @@ const updateCalendar1 = (weekday) => {
 
 const updateCalendar2 = (weekday) => {
   const chart = calendar(data, {
-    id: 'calendar2',
+    svgId: 'calendar2',
     x: d => d.Date,
     y: d => d.Volume,
     weekday: weekday,

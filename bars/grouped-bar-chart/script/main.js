@@ -14,7 +14,6 @@ const stateages = ages.flatMap(age => states.map(d => ({
   population: d[age]
 }))); // pivot longer
 
-
 const chart = stackedBarChart(stateages, {
   x: d => d.state,
   y: d => d.population / 1e6,

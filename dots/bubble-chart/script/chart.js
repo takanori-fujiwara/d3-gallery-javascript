@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/bubble-chart
 
 export const bubbleChart = (data, {
-  id = 'bubble-chart',
+  svgId = 'bubble-chart',
   name = ([x]) => x, // alias for label
   label = name, // given d in data, returns text to display on the bubble
   value = ([, y]) => y, // given d in data, returns a quantitative size
@@ -58,10 +58,10 @@ export const bubbleChart = (data, {
       })
       .sum(i => V[i]));
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [-marginLeft, -marginTop, width, height])

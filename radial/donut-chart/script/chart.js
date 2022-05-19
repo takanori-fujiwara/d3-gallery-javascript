@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/donut-chart
 
 export const donutChart = (data, {
-  id = 'donut-chart',
+  svgId = 'donut-chart',
   name = ([x]) => x, // given d in data, returns the (ordinal) label
   value = ([, y]) => y, // given d in data, returns the (quantitative) value
   title, // given d in data, returns the title text
@@ -56,10 +56,10 @@ export const donutChart = (data, {
   const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
   const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [-width / 2, -height / 2, width, height])

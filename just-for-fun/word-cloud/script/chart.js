@@ -8,7 +8,7 @@
 // https://observablehq.com/@d3/word-cloud
 
 export const wordCloud = (text, {
-  id = 'word-cloud',
+  svgId = 'word-cloud',
   size = group => group.length, // Given a grouping of words, returns the size factor for that word
   word = d => d, // Given an item of the data array, returns the word
   marginTop = 0, // top margin, in pixels
@@ -34,10 +34,10 @@ export const wordCloud = (text, {
       size
     }));
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr("viewBox", [0, 0, width, height])
     .attr("width", width)
     .attr("font-family", fontFamily)

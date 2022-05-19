@@ -18,7 +18,7 @@
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 export const vaccineChart = (data, {
-  id = 'vaccine-chart',
+  svgId = 'vaccine-chart',
   width = 900,
   height = 500,
   marginTop = 20,
@@ -69,10 +69,10 @@ export const vaccineChart = (data, {
       `${f(d)} cases`;
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
+  d3.select('body').select(`svg#${svgId}`).remove();
 
   const svg = d3.select('body').append('svg')
-    .attr('id', id)
+    .attr('id', svgId)
     .attr('viewBox', [0, 0, width, height + marginTop + marginBottom])
     .attr('font-family', 'sans-serif')
     .attr('font-size', 10);
