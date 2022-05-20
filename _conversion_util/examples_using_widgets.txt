@@ -8,5 +8,6 @@ networks - sankey: dropdown
 hierarchies - treemap: dropdown
 animation - connected-scatterplot: push button
 animation - bar-chart-transitions: interval trigger
+animation - animated-treemap: scrubber
 interaction - index-chart: interval trigger
 analysis - bollinger-bands: text + slider
