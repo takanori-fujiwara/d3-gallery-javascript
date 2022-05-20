@@ -1,4 +1,5 @@
 .DS_Store
+thumbnails_source/
 
 # Build and Release Folders
 bin-debug/

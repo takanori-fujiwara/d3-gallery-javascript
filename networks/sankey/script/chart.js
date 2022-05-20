@@ -54,7 +54,7 @@ export const sankeyChart = ({
     left: d3.sankeyLeft,
     right: d3.sankeyRight,
     center: d3.sankeyCenter
-  } [nodeAlign] ? ? d3.sankeyJustify;
+  } [nodeAlign] ?? d3.sankeyJustify;
 
   // Compute values.
   const LS = d3.map(links, linkSource).map(intern);

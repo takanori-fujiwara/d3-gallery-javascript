@@ -1,0 +1,1258 @@
+<html>
+
+<head>
+  <title>D3 Gallery Vanilla JS</title>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' type='text/css' href='./style.css'>
+</head>
+
+<body>
+  <h1>D3 Gallery (Vanilla JavaScript Implementation) (<a href='https://observablehq.com/@d3/gallery'>original observable code</a>)</h1>
+
+  <div class='category'>
+    <h2>Animation</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./animation/animated-treemap/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Animated treemap</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/temporal-force-directed-graph/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Temporal force-directed graph</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/connected-scatterplot/'>
+          <img src='./_thumbnails/connected-scatterplot.png'>
+          <p>Connected scatterplot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/the-wealth-health-of-nations/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>The wealth & health of nations</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/scatterplot-tour/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Scatterplot tour</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/bar-chart-race/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Bar chart race</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/stacked-to-grouped-bars/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Stacked-to-grouped bars</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/streamgraph-transitions/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Streamgraph transitions</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/smooth-zooming/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Smooth zooming</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/zoom-to-bounding-box/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoom to bounding box</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/orthographic-to-equirectangular/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Orthographic to equirectangular</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/world-tour/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>World tour</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/walmarts-growth/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Walmart’s growth</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/hierarchical-bar-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hierarchical bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/zoomable-treemap/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoomable treemap</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/zoomable-circle-packing/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoomable circle packing</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/collapsible-tree/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Collapsible tree</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/zoomable-icicle/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoomable icicle</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/zoomable-sunburst/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoomable sunburst</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/bar-chart-transitions/'>
+          <img src='./_thumbnails/bar-chart-transitions.png'>
+          <p>Sortable bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./animation/icelandic-population-by-age-1841-2019/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Icelandic population by age, 1841–2019</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Interaction</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./interaction/versor-dragging/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Versor dragging</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/index-chart/'>
+          <img src='./_thumbnails/index-chart.png'>
+          <p>Index chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/sequences-sunburst/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Sequences sunburst</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/brushable-scatterplot/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Brushable scatterplot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/brushable-scatterplot-matrix/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Brushable scatterplot matrix</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/pannable-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Pannable chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/zoomable-area-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoomable area chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/zoomable-bar-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Zoomable bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./interaction/seamless-zoomable-map-tiles/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Seamless zoomable map tiles</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Analysis</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./analysis/moving-average/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Moving average</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/bollinger-bands/'>
+          <img src='./_thumbnails/bollinger-bands.png'>
+          <p>Bollinger bands</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/box-plot/'>
+          <img src='./_thumbnails/box-plot.png'>
+          <p>Box plot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/histogram/'>
+          <img src='./_thumbnails/histogram.png'>
+          <p>Histogram</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/kernel-density-estimation/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Kernel density estimation</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/density-contours/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Density contours</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/contours/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Contours</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/hexbin/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hexbin</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/hexbin-area/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hexbin (area)</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/hexbin-map/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hexbin map</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/q-q-plot/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Q–Q plot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/normal-quantile-plot/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Normal quantile plot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./analysis/parallel-sets/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Parallel sets</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Hierarchies</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./hierarchies/treemap/'>
+          <img src='./_thumbnails/treemap.png'>
+          <p>Treemap</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/cascaded-treemap/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Cascaded treemap</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/nested-treemap/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Nested treemap</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/circle-packing/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Circle packing</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/circle-packing-monochrome/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Circle packing (monochrome)</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/indented-tree/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Indented tree</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/tree/'>
+          <img src='./_thumbnails/tree.png'>
+          <p>Tidy tree</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/radial-tree/'>
+          <img src='./_thumbnails/radial-tree.png'>
+          <p>Radial tidy tree</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/cluster/'>
+          <img src='./_thumbnails/cluster.png'>
+          <p>Cluster dendrogram</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/radial-cluster/'>
+          <img src='./_thumbnails/radial-cluster.png'>
+          <p>Radial dendrogram</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/sunburst/'>
+          <img src='./_thumbnails/sunburst.png'>
+          <p>Sunburst</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/icicle/'>
+          <img src='./_thumbnails/icicle.png'>
+          <p>Icicle</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/tangled-tree-visualization-ii/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Tangled tree visualization</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/tree-of-life/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Phylogenetic tree</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./hierarchies/force-directed-tree/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Force-directed tree</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Networks</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./networks/force-directed-graph/'>
+          <img src='./_thumbnails/force-directed-graph.png'>
+          <p>Force-directed graph</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/disjoint-force-directed-graph/'>
+          <img src='./_thumbnails/disjoint-force-directed-graph.png'>
+          <p>Disjoint force-directed graph</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/mobile-patent-suits/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Mobile patent suits</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/arc-diagram/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Arc diagram</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/sankey/'>
+          <img src='./_thumbnails/sankey.png'>
+          <p>Sankey diagram</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/hierarchical-edge-bundling/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hierarchical edge bundling</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/2/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hierarchical edge bundling</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/chord-diagram/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Chord diagram</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./networks/chord-dependency-diagram/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Chord dependency diagram</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Bars</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./bars/bar-chart/'>
+          <img src='./_thumbnails/bar-chart.png'>
+          <p>Bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/horizontal-bar-chart/'>
+          <img src='./_thumbnails/horizontal-bar-chart.png'>
+          <p>Horizontal bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/diverging-bar-chart/'>
+          <img src='./_thumbnails/diverging-bar-chart.png'>
+          <p>Diverging bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/stacked-bar-chart/'>
+          <img src='./_thumbnails/stacked-bar-chart.png'>
+          <p>Stacked bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/stacked-horizontal-bar-chart/'>
+          <img src='./_thumbnails/stacked-horizontal-bar-chart.png'>
+          <p>Stacked horizontal bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/stacked-normalized-horizontal-bar/'>
+          <img src='./_thumbnails/stacked-normalized-horizontal-bar.png'>
+          <p>Stacked normalized horizontal bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/grouped-bar-chart/'>
+          <img src='./_thumbnails/grouped-bar-chart.png'>
+          <p>Grouped bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/diverging-stacked-bar-chart/'>
+          <img src='./_thumbnails/diverging-stacked-bar-chart.png'>
+          <p>Diverging stacked bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/marimekko-chart/'>
+          <img src='./_thumbnails/marimekko-chart.png'>
+          <p>Marimekko chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/world-history-timeline/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>World history timeline</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/calendar/'>
+          <img src='./_thumbnails/calendar.png'>
+          <p>Calendar view</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/the-impact-of-vaccines/'>
+          <img src='./_thumbnails/the-impact-of-vaccines.png'>
+          <p>The impact of vaccines</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/electric-usage-2019/'>
+          <img src='./_thumbnails/electric-usage-2019.png'>
+          <p>Electricity usage, 2019</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./bars/revenue-by-music-format-1973-2018/'>
+          <img src='./_thumbnails/revenue-by-music-format-1973-2018.png'>
+          <p>Revenue by music format, 1973–2018</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Lines</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./lines/line-chart/'>
+          <img src='./_thumbnails/line-chart.png'>
+          <p>Line chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/line-with-missing-data/'>
+          <img src='./_thumbnails/line-with-missing-data.png'>
+          <p>Line with missing data</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/multi-line-chart/'>
+          <img src='./_thumbnails/multi-line-chart.png'>
+          <p>Multi-line chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/change-line-chart/'>
+          <img src='./_thumbnails/change-line-chart.png'>
+          <p>Change line chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/slope-chart/'>
+          <img src='./_thumbnails/slope-chart.png'>
+          <p>Slope chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/mareys-trains/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Marey’s trains</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/candlestick-chart/'>
+          <img src='./_thumbnails/candlestick-chart.png'>
+          <p>Candlestick chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/variable-color-line/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Variable-color line</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/gradient-encoding/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Gradient encoding</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/threshold-encoding/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Threshold encoding</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/parallel-coordinates/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Parallel coordinates</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/cancer-survival-rates/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>Slope chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/inequality-in-american-cities/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Inequality in American cities</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/new-zealand-tourists-1921-2018/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>New zealand tourists, 1921–2018</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./lines/sea-ice-extent-1978-2017/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Sea ice extent, 1978–2017</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Areas</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./areas/area-chart/'>
+          <img src='./_thumbnails/area-chart.png'>
+          <p>Area chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/area-with-missing-data/'>
+          <img src='./_thumbnails/area-with-missing-data.png'>
+          <p>Area with missing data</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/stacked-area-chart/'>
+          <img src='./_thumbnails/stacked-area-chart.png'>
+          <p>Stacked area chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/normalized-stacked-area-chart/'>
+          <img src='./_thumbnails/normalized-stacked-area-chart.png'>
+          <p>Normalized stacked area chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/u-s-population-by-state-1790-1990/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>U.S. population by state, 1790–1990</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/streamgraph/'>
+          <img src='./_thumbnails/streamgraph.png'>
+          <p>Streamgraph</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/difference-chart/'>
+          <img src='./_thumbnails/difference-chart.png'>
+          <p>Difference chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/band-chart/'>
+          <img src='./_thumbnails/band-chart.png'>
+          <p>Band chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/ridgeline-plot/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Ridgeline (joy) plot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/horizon-chart/'>
+          <img src='./_thumbnails/horizon-chart.png'>
+          <p>Horizon chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./areas/realtime-horizon-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Realtime horizon chart</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Dots</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./dots/scatterplot/'>
+          <img src='./_thumbnails/scatterplot.png'>
+          <p>Scatterplot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/scatterplot-with-shapes/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Scatterplot with shapes</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/splom/'>
+          <img src='./_thumbnails/splom.png'>
+          <p>Scatterplot matrix</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/dot-plot/'>
+          <img src='./_thumbnails/dot-plot.png'>
+          <p>Dot plot</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/global-temperature-trends/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Global temperature trends</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/bubble-map/'>
+          <img src='./_thumbnails/bubble-map.png'>
+          <p>Bubble map</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/spike-map/'>
+          <img src='./_thumbnails/spike-map.png'>
+          <p>Spike map</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/bubble-chart/'>
+          <img src='./_thumbnails/bubble-chart.png'>
+          <p>Bubble chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/beeswarm/'>
+          <img src='./_thumbnails/beeswarm.png'>
+          <p>Beeswarm</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/beeswarm-mirrored/'>
+          <img src='./_thumbnails/beeswarm-mirrored.png'>
+          <p>Mirrored beeswarm</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./dots/hertzsprung-russell-diagram/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Hertzsprung–Russell diagram</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Radial</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./radial/pie-chart/'>
+          <img src='./_thumbnails/pie-chart.png'>
+          <p>Pie chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./radial/donut-chart/'>
+          <img src='./_thumbnails/donut-chart.png'>
+          <p>Donut chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./radial/radial-area-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Radial area chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./radial/radial-stacked-bar-chart/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Radial stacked bar chart</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./radial/radial-stacked-bar-chart-ii/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Radial stacked bar chart</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Annotation</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./annotation/inline-labels/'>
+          <img src='./_thumbnails/inline-labels.png'>
+          <p>Inline labels</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/directly-labelling-lines/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Directly labelling lines</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/line-with-tooltip/'>
+          <img src='./_thumbnails/line-with-tooltip.png'>
+          <p>Line chart with tooltip</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/voronoi-labels/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Voronoi labels</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/occlusion/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>Occlusion</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/graticule-labels-stereographic/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Graticule labels</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/styled-axes/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Styled axes</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./annotation/color-legend/'>
+          <img src='./_thumbnails/color-legend.png'>
+          <p>Color legend</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Maps</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./maps/choropleth/'>
+          <img src='./_thumbnails/choropleth.png'>
+          <p>Choropleth</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/bivariate-choropleth/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Bivariate choropleth</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/state-choropleth/'>
+          <img src='./_thumbnails/state-choropleth.png'>
+          <p>State choropleth</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/world-choropleth/'>
+          <img src='./_thumbnails/world-choropleth.png'>
+          <p>World choropleth</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/world-map/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>World map</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/projection-comparison/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Projection comparison</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/tissots-indicatrix/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Tissot’s indicatrix</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/web-mercator-tiles/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Web Mercator tiles</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/raster-tiles/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Raster tiles</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/vector-tiles/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Vector tiles</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/clipped-map-tiles/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Clipped map tiles</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/raster-vector/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Raster & vector</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/vector-field/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Vector field</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/geotiff-contours-ii/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>GeoTIFF contours</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/u-s-airports-voronoi/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>U.S. airports voronoi</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/world-airports-voronoi/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>World airports voronoi</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/solar-terminator/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Solar terminator</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/solar-path/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Solar path</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/star-map/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Star map</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./maps/non-contiguous-cartogram/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Non-contiguous cartogram</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Essays</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./essays/d3-packenclose/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>d3.packEnclose</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./essays/centerline-labeling/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>Centerline labeling</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./essays/methods-of-comparison-compared/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>Methods of comparison, compared</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./essays/predator-and-prey/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Predator and prey</p>
+        </a>
+      </div>
+        
+    </div>
+  </div>
+  <div class='category'>
+    <h2>Just for fun</h2>
+    <div class='thumbnails'>
+      <div class='thumbnail'>
+        <a href='./just-for-fun/polar-clock/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Polar clock</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/stern-brocot-tree/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Stern–brocot tree</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/voronoi-stippling/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Voronoi stippling</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/watercolor/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Watercolor</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/psr-b1919-21/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>PSR B1919+21</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/logo/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Logo</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/epicyclic-gearing/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Epicyclic gearing</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/owls-to-the-max/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>Owls to the max</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/tadpoles/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Tadpoles</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/word-cloud/'>
+          <img src='./_thumbnails/word-cloud.png'>
+          <p>Word cloud</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/spilhaus-shoreline-map/'>
+          <img src='./_thumbnails/no-license.png'>
+          <p>Spilhaus shoreline map</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/phases-of-the-moon/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Phases of the moon</p>
+        </a>
+      </div>
+        
+      <div class='thumbnail'>
+        <a href='./just-for-fun/color-schemes/'>
+          <img src='./_thumbnails/not-implemented.png'>
+          <p>Color schemes</p>
+        </a>
+      </div>
+        
+    </div>
+  </div></body>
+</html>

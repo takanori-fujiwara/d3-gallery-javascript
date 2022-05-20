@@ -1,0 +1,1003 @@
+{
+  "animation": [{
+    "path": "@d3/animated-treemap",
+    "thumbnail": "882768da05f294d7eea3aef0e4d5e060b9f9ee542d681772b54341f26b6abfef",
+    "title": "Animated treemap",
+    "author": "D3"
+  }, {
+    "path": "@d3/temporal-force-directed-graph",
+    "thumbnail": "c5a7dced97b9c84ce64b8bfbabb7d62f9d819e1377ac4a6dc6929abce7936b0f",
+    "title": "Temporal force-directed graph",
+    "author": "D3"
+  }, {
+    "path": "@d3/connected-scatterplot",
+    "thumbnail": "c4c3780815c8e3cc1370d67f1596101cbde2d420125db73d33600e249c382e51",
+    "title": "Connected scatterplot",
+    "author": "D3"
+  }, {
+    "path": "@mbostock/the-wealth-health-of-nations",
+    "thumbnail": "6eb6014778b13abd6c15dddaabaa0c7ca27b091982736703a0b9f75013445ebf",
+    "title": "The wealth & health of nations",
+    "author": "Mike Bostock"
+  }, {
+    "path": "@d3/scatterplot-tour",
+    "thumbnail": "d18023b5df31a426d5d9f0d2e4f1fd7954a905b478787977ec576bd01f8e9024",
+    "title": "Scatterplot tour",
+    "author": "D3"
+  }, {
+    "path": "@d3/bar-chart-race",
+    "thumbnail": "b43c7847e13508c9b9bdff7e827e2998da03b8e6e4093a2f6a8d5de90c9a72c7",
+    "title": "Bar chart race",
+    "author": "D3"
+  }, {
+    "path": "@d3/stacked-to-grouped-bars",
+    "thumbnail": "6435b9edd065e3b9bdfabe11b165521ace5ccd28ee49b1611e24e5cad3206d4f",
+    "title": "Stacked-to-grouped bars",
+    "author": "D3"
+  }, {
+    "path": "@d3/streamgraph-transitions",
+    "thumbnail": "a1c46be22a981d022a6ea0f5a9d37ba957d9bb611c3e625116043e0ea3da1103",
+    "title": "Streamgraph transitions",
+    "author": "D3"
+  }, {
+    "path": "@d3/smooth-zooming",
+    "thumbnail": "6411845b0b113d8c7e7fb483ab4b0f826d9bca18538cd05b245813dd459a113f",
+    "title": "Smooth zooming",
+    "author": "D3"
+  }, {
+    "path": "@d3/zoom-to-bounding-box",
+    "thumbnail": "a31e0c327014bc52aafa52f46aa58595917279c31895cc6d3097679693182759",
+    "title": "Zoom to bounding box",
+    "author": "D3"
+  }, {
+    "path": "@d3/orthographic-to-equirectangular",
+    "thumbnail": "9a772b8402db03248402e3d20e6f932b08a18824dba38fb1aec1bfcdb7c60f11",
+    "title": "Orthographic to equirectangular",
+    "author": "D3"
+  }, {
+    "path": "@d3/world-tour",
+    "thumbnail": "5e120c0171d667b51fa6cc1511344e6c5d387e738b777db918396d7807d85ecc",
+    "title": "World tour",
+    "author": "D3"
+  }, {
+    "path": "@mbostock/walmarts-growth",
+    "thumbnail": "9f321c55f570971dd7b5bff39424eaa709de151e75bc9466665c2494d7008f5b",
+    "title": "Walmart’s growth",
+    "author": "Mike Bostock"
+  }, {
+    "path": "@d3/hierarchical-bar-chart",
+    "thumbnail": "5969de1a0e9d27715878aceb03d94bb181379a20c80a9dd0e22494e85b1032ff",
+    "title": "Hierarchical bar chart",
+    "author": "D3"
+  }, {
+    "path": "@d3/zoomable-treemap",
+    "thumbnail": "7a9c4803cc094ed0788600ad38fecbd0b57e1c5d6c39ce6af4346f9330fa3b1b",
+    "title": "Zoomable treemap",
+    "author": "D3"
+  }, {
+    "path": "@d3/zoomable-circle-packing",
+    "thumbnail": "b7cc8cf4a59de5ccd08c47284bd20de50d3cc20fe29d9f76caaef1a2b661abae",
+    "title": "Zoomable circle packing",
+    "author": "D3"
+  }, {
+    "path": "@d3/collapsible-tree",
+    "thumbnail": "d7fb434ff8508726495d62191283cd9584d599fb42756eb6dcb924563cb11b50",
+    "title": "Collapsible tree",
+    "author": "D3"
+  }, {
+    "path": "@d3/zoomable-icicle",
+    "thumbnail": "f73b8e79e15aac9acdf74ec25ee7606989356d7fbfc8c8513f7c8675851b6501",
+    "title": "Zoomable icicle",
+    "author": "D3"
+  }, {
+    "path": "@d3/zoomable-sunburst",
+    "thumbnail": "6d2e1f16d415ac13f13740b6155fdcfb8d3836e5b2332277de1e26742ffbcb0c",
+    "title": "Zoomable sunburst",
+    "author": "D3"
+  }, {
+    "path": "@d3/sortable-bar-chart",
+    "thumbnail": "0e8f394a9b90622bf4b422d264f3a199a0d9ec3a4c414b2e6f33788681cc486f",
+    "title": "Sortable bar chart",
+    "author": "D3"
+  }, {
+    "path": "@mbostock/icelandic-population-by-age-1841-2019",
+    "thumbnail": "fc270fc1417c10d1ec152da5f9a42f8d6948aeceb38616461f13cfe4da27c5b3",
+    "title": "Icelandic population by age, 1841–2019",
+    "author": "Mike Bostock"
+  }],
+  "interaction": [{
+      "path": "@d3/versor-dragging",
+      "thumbnail": "79a43b8d1ba72926ee8efb9bdfe24ed20611184e081ed3c892eb32e1bb805397",
+      "title": "Versor dragging",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/index-chart",
+      "thumbnail": "87220c31b9e2456687bc19579ff96d5dc8b7707be21de5a380df79a9176ffd94",
+      "title": "Index chart",
+      "author": "D3"
+    },
+    {
+      "path": "@kerryrodden/sequences-sunburst",
+      "thumbnail": "9a73001277807e217a710e37ffcd7912e9ec13dba0ba11aff65420d09b3edaad",
+      "title": "Sequences sunburst",
+      "author": "Kerry Rodden"
+    },
+    {
+      "path": "@d3/brushable-scatterplot",
+      "thumbnail": "2da3ae8fda5623d50b14ce86f380b4efdf6b4025671505f46c5184e18b354330",
+      "title": "Brushable scatterplot",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/brushable-scatterplot-matrix",
+      "thumbnail": "2dc031720e792f20bb06fb3d97d1b95b1b6c73da7c92ba2cca30ca8d10de8f9a",
+      "title": "Brushable scatterplot matrix",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/pannable-chart",
+      "thumbnail": "ec247c2705d1fd141352fa24f7419638d35713cd855ce5fdb6e52678865a6ddb",
+      "title": "Pannable chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/zoomable-area-chart",
+      "thumbnail": "de7799c54a2a6f500dcea71072bce7895ba5985fd10542b25cc5fb75a981efab",
+      "title": "Zoomable area chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/zoomable-bar-chart",
+      "thumbnail": "0e8f394a9b90622bf4b422d264f3a199a0d9ec3a4c414b2e6f33788681cc486f",
+      "title": "Zoomable bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/seamless-zoomable-map-tiles",
+      "thumbnail": "49769e89aedc8c066bb925e05c19d5fdf003a177670fdeb1b3dbc1d3b120b3db",
+      "title": "Seamless zoomable map tiles",
+      "author": "D3"
+    }
+  ],
+  "analysis": [{
+      "path": "@d3/moving-average",
+      "thumbnail": "7929711ccf9ca674cc779ce46e64571f7c38796c7778b983e68176af6afeb155",
+      "title": "Moving average",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/bollinger-bands",
+      "thumbnail": "ee6d1ffcc0b575a74bd6402ed129cea73f7c45727bb1e3e960ef13f9bd5014d1",
+      "title": "Bollinger bands",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/box-plot",
+      "thumbnail": "bd4c5d003300d7c20d0a3af1055085deb043bbd2505c20acc1f95332f0591164",
+      "title": "Box plot",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/histogram",
+      "thumbnail": "63c3af7bc6f6ed1da8b3f4ad6021f11ac0a953619368ce5f10481f61118e7134",
+      "title": "Histogram",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/kernel-density-estimation",
+      "thumbnail": "95d34bc68cc84b96f96ca4b073f9fc557df7c9fe4213c43536201e908909da3c",
+      "title": "Kernel density estimation",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/density-contours",
+      "thumbnail": "96a132291395b98ebe551971b5dab56f2c0440ee09b3071641480a378d24a997",
+      "title": "Density contours",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/contours",
+      "thumbnail": "500cadff2bd8b83135b5189668297c7f1c179900347911330660b2b83e9e9c39",
+      "title": "Contours",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/hexbin",
+      "thumbnail": "7c9f5bd32119c0575b9db52adc8f859c07891367f29ed5f463ad878602af67cf",
+      "title": "Hexbin",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/hexbin-area",
+      "thumbnail": "7e79d7e019ec62049d6cb402c07afebd817817d50dc1402e42e156bd222fc59e",
+      "title": "Hexbin (area)",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/hexbin-map",
+      "thumbnail": "aa10cb91e3c7b30519994def10e0ba7f0371062aebed9152ad59a55099889646",
+      "title": "Hexbin map",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/q-q-plot",
+      "thumbnail": "c657b616efca47883c776c810d080af24ff941b66ba4dfd80613048badeaee7d",
+      "title": "Q–Q plot",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/normal-quantile-plot",
+      "thumbnail": "4f5ad4d8f5d19810c36e332d83eb2d0ed307bdedd4a65071d8e2480c88da8ec4",
+      "title": "Normal quantile plot",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/parallel-sets",
+      "thumbnail": "27ed7774e1fa36663a857c82f0a056db7e3d1726d532a5b8ec0a38a1d4d2a9c7",
+      "title": "Parallel sets",
+      "author": "D3"
+    }
+  ],
+  "hierarchies": [{
+      "path": "@d3/treemap",
+      "thumbnail": "278516556172557a945111e81e0996b1e461364bc1402c57e412a33597d2f014",
+      "title": "Treemap",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/cascaded-treemap",
+      "thumbnail": "b9bed4be41769129826de1c775ee5676bd3769c509348389014baaabc30f0530",
+      "title": "Cascaded treemap",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/nested-treemap",
+      "thumbnail": "16fd5847631cddf68b99cf2b1f0dd3d421d2948ef98c2a0c4124846e5725f207",
+      "title": "Nested treemap",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/circle-packing",
+      "thumbnail": "03d2124f60277b56802456cca845106cc66eef77771000ce575a196da6d2fa89",
+      "title": "Circle packing",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/circle-packing-monochrome",
+      "thumbnail": "0e48e60d7963b38acb83f73875b6b00b1520504c92de8b4aa1419b1727fcedb2",
+      "title": "Circle packing (monochrome)",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/indented-tree",
+      "thumbnail": "baa8dac553884e09caa3f0611a077594ebdfcfd9416647f1d5c8457d898a52a6",
+      "title": "Indented tree",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/tidy-tree",
+      "thumbnail": "68a8e7a585cd8cc77279deaa57ad08dfe0b34bdb1ce290de341e299b44144172",
+      "title": "Tidy tree",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/radial-tidy-tree",
+      "thumbnail": "1a0c15e714b00915cbd845b57731fd6286a97e4e95a7ec2ce289682f39a0ce96",
+      "title": "Radial tidy tree",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/cluster-dendrogram",
+      "thumbnail": "87ade408aa70f0875bf4b158dd986350d931884d5b6717cd7fc9b5d2680904c8",
+      "title": "Cluster dendrogram",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/radial-dendrogram",
+      "thumbnail": "2dc4b6a2731a7216b2e5e555ba6d21b045aae900c022724e20c14833294380ed",
+      "title": "Radial dendrogram",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/sunburst",
+      "thumbnail": "5d33e22bc8da09a4495d5bfe0ff207610f2249dc33cbb98505058a4960e8d668",
+      "title": "Sunburst",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/icicle",
+      "thumbnail": "6800ea153fbc5efdde82ed342b0ce8abfc6a7ebbb70b60944a084c790b6fea42",
+      "title": "Icicle",
+      "author": "D3"
+    },
+    {
+      "path": "@nitaku/tangled-tree-visualization-ii",
+      "thumbnail": "5095e50b5338ca6764d664b98449aadf1cd6fcdafb2639eaad4975013b8e1f17",
+      "title": "Tangled tree visualization",
+      "author": "Matteo Abrate"
+    },
+    {
+      "path": "@mbostock/tree-of-life",
+      "thumbnail": "4947ed7ee51a82ee3ea09baa2fb7a2c2abd111f888fdfde96693e493c48f8d4d",
+      "title": "Phylogenetic tree",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/force-directed-tree",
+      "thumbnail": "0ba641e54c2be034d5ebee3ff1e202a8efb11aab0f55cb4ef1348d7fcfb90a13",
+      "title": "Force-directed tree",
+      "author": "D3"
+    }
+  ],
+  "networks": [{
+      "path": "@d3/force-directed-graph",
+      "thumbnail": "daca6197a1592e5582e904387074d40ce144606eb639222eb9306ce38ba32623",
+      "title": "Force-directed graph",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/disjoint-force-directed-graph",
+      "thumbnail": "f36f862511c45e96cb0e4c26ac6b08024a37266ac7ed1b5d4dbefab2c8b528a6",
+      "title": "Disjoint force-directed graph",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/mobile-patent-suits",
+      "thumbnail": "636bcd430f65f3358a5afea3e49100bd7236a48cf48b2db9fba906e818338307",
+      "title": "Mobile patent suits",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/arc-diagram",
+      "thumbnail": "c2484a1895e229e720b25326057da4385f74fd34d4e9027a69fbb01a53f68472",
+      "title": "Arc diagram",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/sankey-diagram",
+      "thumbnail": "3074afcf13f0dfa574415acc4e293ba58d6da310e2f1a6d68aff493b9607ba1b",
+      "title": "Sankey diagram",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/hierarchical-edge-bundling",
+      "thumbnail": "e1ccc6dd42e7307844136b19c6c6422abfa6e089f7874782afff7f830fc015c9",
+      "title": "Hierarchical edge bundling",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/hierarchical-edge-bundling/2",
+      "thumbnail": "9728eea74c9ba504efb2f2f7e34a9f6921b01f926e037b093d6ec5c9d6bde617",
+      "title": "Hierarchical edge bundling",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/chord-diagram",
+      "thumbnail": "204ffe6e4ebe39ce037c2caa5ac3c22bd630ea6dea19989833afa4d9c7531445",
+      "title": "Chord diagram",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/chord-dependency-diagram",
+      "thumbnail": "e30751ce70884e933de3aeca2972fae06da63ca77aad3d93cb9937f87af92ac3",
+      "title": "Chord dependency diagram",
+      "author": "D3"
+    }
+  ],
+  "bars": [{
+      "path": "@d3/bar-chart",
+      "thumbnail": "0e8f394a9b90622bf4b422d264f3a199a0d9ec3a4c414b2e6f33788681cc486f",
+      "title": "Bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/horizontal-bar-chart",
+      "thumbnail": "e716222d556bbf3fc942f7a177cf657481e051c65eca95505a8b1e37f62e9d95",
+      "title": "Horizontal bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/diverging-bar-chart",
+      "thumbnail": "e39b460ac8979fc8af7dd5376864d89123b69c23589f830a3746495e0f4f960f",
+      "title": "Diverging bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/stacked-bar-chart",
+      "thumbnail": "d913303efcf3c716d98c7b4c3c32a5f56ca4cb8a07faaf5ce2b26b1ec7890e97",
+      "title": "Stacked bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/stacked-horizontal-bar-chart",
+      "thumbnail": "12c8508ce8737281c0ce048eb107978374c29d3dfd82b8c6eabc2822b8215b37",
+      "title": "Stacked horizontal bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/stacked-normalized-horizontal-bar",
+      "thumbnail": "280d8bfe3dfd2989256fa1b99495762cc95a5405636b048bd9834bc1a43e58b6",
+      "title": "Stacked normalized horizontal bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/grouped-bar-chart",
+      "thumbnail": "3e7b399fd633c66198712aae7cebcdcbe97a76b58bd2d5299eb201ef69c38d50",
+      "title": "Grouped bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/diverging-stacked-bar-chart",
+      "thumbnail": "6d30eda49a7bfd8b63019064257600a812ad4443f13becd3719db16a467de722",
+      "title": "Diverging stacked bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/marimekko-chart",
+      "thumbnail": "ef04371d3b0179ecf2f905d6d46415d8e43b874c0cf2dc50b0d4ec9ee6ab047b",
+      "title": "Marimekko chart",
+      "author": "D3"
+    },
+    {
+      "path": "@tezzutezzu/world-history-timeline",
+      "thumbnail": "3a98164ca1a4a34a0fb805c771155dcab585a436ff99401ab827d23b2a49d841",
+      "title": "World history timeline",
+      "author": "Danilo Di Cuia"
+    },
+    {
+      "path": "@d3/calendar-view",
+      "thumbnail": "d008c0aeb2e945aef84b41961dd335bf81d9e01aed81b0f3c14ee782683ebbe9",
+      "title": "Calendar view",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/the-impact-of-vaccines",
+      "thumbnail": "bf486e55141ea7e367ff1076e604d00522a4a4c22a63ca1a56ae5031b6f2f6da",
+      "title": "The impact of vaccines",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/electric-usage-2019",
+      "thumbnail": "a1f5da765b6add8b5bfd74a64631ed71f991be40abcf31b759a0c112e0c30e07",
+      "title": "Electricity usage, 2019",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/revenue-by-music-format-1973-2018",
+      "thumbnail": "ab84b1533858c337a8d4817b2256eb136216403fd7857371ead6c1915958b2eb",
+      "title": "Revenue by music format, 1973–2018",
+      "author": "Mike Bostock"
+    }
+  ],
+  "lines": [{
+      "path": "@d3/line-chart",
+      "thumbnail": "12f99b59b32cf0794534d7a4e3f8c86c4a6b25428e135db9e17133bff935a995",
+      "title": "Line chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/line-with-missing-data",
+      "thumbnail": "506192d7f8140a2ea4e48e6f064b9a89c3f2163208ddbd69729033326652c43c",
+      "title": "Line with missing data",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/multi-line-chart",
+      "thumbnail": "efd2d99f7030626ac0e791b999c847b169ef7572c9956e0fb979ce01fb1ac687",
+      "title": "Multi-line chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/change-line-chart",
+      "thumbnail": "c19b0ac83a3b4a8ba4b54cc2347322336f0f161b1f72034634d3bbda366124b0",
+      "title": "Change line chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/slope-chart",
+      "thumbnail": "cd4f14efd1b45ac020b495178bd5467fea6e57ce7eb4b066fca40c9009f0cb26",
+      "title": "Slope chart",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/mareys-trains",
+      "thumbnail": "c183df5c146a4423aa088e67949957ea1ab0b67c3ae6e1469e6fd6f92fd757be",
+      "title": "Marey’s trains",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/candlestick-chart",
+      "thumbnail": "d545d9ba7c68765e54e4ed144496c9fa26822f3b5bcdc9bcf4fbdab5c3dc2ac0",
+      "title": "Candlestick chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/variable-color-line",
+      "thumbnail": "ee7b5f671a5879ba6b1560fdc2c68a4b1aafa966014b6880a6a41057443fc02a",
+      "title": "Variable-color line",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/gradient-encoding",
+      "thumbnail": "3b9c268fede0c1d958df5e54d16bba4f91383f1e371331db417341c95eb62188",
+      "title": "Gradient encoding",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/threshold-encoding",
+      "thumbnail": "61af2f2c261cc7161243068abda0ceb7de8697c675c4f13c737543d682cd53c6",
+      "title": "Threshold encoding",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/parallel-coordinates",
+      "thumbnail": "137c531fbab68c35e4713548f23b720c511234954380d23d9396c48a83e03d2d",
+      "title": "Parallel coordinates",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/cancer-survival-rates",
+      "thumbnail": "5e202652b9f8316b3b30043384c6bda89d3096c366c1ecd4edc5e7cb4858627b",
+      "title": "Slope chart",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/inequality-in-american-cities",
+      "thumbnail": "9743d80ca7e07596c11b59d8de34f562b3c9667d95ebd2b4ac0a26c713c4c685",
+      "title": "Inequality in American cities",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/new-zealand-tourists-1921-2018",
+      "thumbnail": "f661a7cba9d98586aed48fd5a6878c3dff1948139ba75e53fcfd0b64b0f22bc5",
+      "title": "New zealand tourists, 1921–2018",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/sea-ice-extent-1978-2017",
+      "thumbnail": "4515af68eb89274f28219a2b93dbeb8b192c1dd83d51ade786a87910bba7d795",
+      "title": "Sea ice extent, 1978–2017",
+      "author": "Mike Bostock"
+    }
+  ],
+  "areas": [{
+      "path": "@d3/area-chart",
+      "thumbnail": "621c926e03757f3473aa2d0257e7eb0666ee01b22c73a658ce7357fea1d91afe",
+      "title": "Area chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/area-with-missing-data",
+      "thumbnail": "5f468d0a286a6a173120f7e05abca19944f939e216768e31ef8afccfcf9a84c2",
+      "title": "Area with missing data",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/stacked-area-chart",
+      "thumbnail": "718ec24be1b77d9130e3e18f7e922ff092ae634d515924d1cf97b507e26de0dd",
+      "title": "Stacked area chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/normalized-stacked-area-chart",
+      "thumbnail": "da0f79e3e2b763746b60b23f35b65099a6ba629034b71a69e1c0c613b2b39af6",
+      "title": "Normalized stacked area chart",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/u-s-population-by-state-1790-1990",
+      "thumbnail": "c703635d744ecf5e09203afb3e96cf6668364e5029a85c41a6b891178764a3ae",
+      "title": "U.S. population by state, 1790–1990",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/streamgraph",
+      "thumbnail": "b33be4bd1cdafc454f4c2665ce9d4ef6d97aa1bbd42e7297913af3a5cd5b0b26",
+      "title": "Streamgraph",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/difference-chart",
+      "thumbnail": "8a9d574def3360a9b5ca518668387d2bbc5115c02d2bee03b19f01ac67779f4b",
+      "title": "Difference chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/band-chart",
+      "thumbnail": "f264024d17774046f5b313955678bc5c1eab82ba043c0eff74003309f6e1defe",
+      "title": "Band chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/ridgeline-plot",
+      "thumbnail": "d397f23fd5c4230bb7d0b9aba0790f1452d8ef1afd4c24c8e9eb465a74a45bce",
+      "title": "Ridgeline (joy) plot",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/horizon-chart",
+      "thumbnail": "4674f92f3076649b97b5f833d80ae43df494be11370d79cf15d9a051685c197c",
+      "title": "Horizon chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/realtime-horizon-chart",
+      "thumbnail": "969982ef06b8b9ef724799a2c6824301d0cbb3152eb4b2d5e506305123fd5b9a",
+      "title": "Realtime horizon chart",
+      "author": "D3"
+    }
+  ],
+  "dots": [{
+      "path": "@d3/scatterplot",
+      "thumbnail": "9c4990bd174ca8781013b045fadb3b7c13e7f9e5540480eb20ceaa44d00b1bed",
+      "title": "Scatterplot",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/scatterplot-with-shapes",
+      "thumbnail": "240a416712b73a02bf6515ef3086ff8c19dd870339d307d0029e4bceb70aa631",
+      "title": "Scatterplot with shapes",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/scatterplot-matrix",
+      "thumbnail": "5e34c69987146d69e893eb5d44549c14e456252464186c389218937ece7b8d28",
+      "title": "Scatterplot matrix",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/dot-plot",
+      "thumbnail": "bc17217415bc4e5f5510294076bb1022b97792ab67a7d1c4725e144787f1e8da",
+      "title": "Dot plot",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/global-temperature-trends",
+      "thumbnail": "1c7c0e607ef45cf35efa05d291f056b3ccffde40a7833c12c1b72321d7e7006a",
+      "title": "Global temperature trends",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/bubble-map",
+      "thumbnail": "9b39b19f35384e5f742ac5a45c6666cd27a7c15d8504dbcca03e6be081bd0aef",
+      "title": "Bubble map",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/spike-map",
+      "thumbnail": "3ca25b589618b503e391b0ba48eab612c427ba9faa7abdb5ec9befff5a5841d5",
+      "title": "Spike map",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/bubble-chart",
+      "thumbnail": "ca4f7b52273224989f1ecec193f6c9a1b11b85456d2ad78efcf6a54267839b78",
+      "title": "Bubble chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/beeswarm",
+      "thumbnail": "4b93a0e00af84c60c55efdd8a025b60b8f1fc4eec95ef5d278567e5592dd6052",
+      "title": "Beeswarm",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/beeswarm-ii",
+      "thumbnail": "d89afe7d4715896b0377c5d88b097997496017c0c6cad25e5b3bcd9ffd86a5ef",
+      "title": "Mirrored beeswarm",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/hertzsprung-russell-diagram",
+      "thumbnail": "40a8ec3212c0cbcdc7cb1643c225fa090de9d8e39f7ceb91689ef9b2f453ef2b",
+      "title": "Hertzsprung–Russell diagram",
+      "author": "Mike Bostock"
+    }
+  ],
+  "radial": [{
+      "path": "@d3/pie-chart",
+      "thumbnail": "bc1e43c4dc01a4d7bc462ecd6cca55d096138f86406fc54be2a7674d0e733c57",
+      "title": "Pie chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/donut-chart",
+      "thumbnail": "6ba65a23ffa3326d3679a66e6b1a9a17af61a1512d1f17258695fe5decfa6039",
+      "title": "Donut chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/radial-area-chart",
+      "thumbnail": "99f2b2dfc8f848520ce4e1f55488913d550b0db2f81bf112ab2ab1a75abd12b8",
+      "title": "Radial area chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/radial-stacked-bar-chart",
+      "thumbnail": "0875d8b261a25870141ac61275d0755c552c3653db69b0e731e8ef3fc1bbe278",
+      "title": "Radial stacked bar chart",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/radial-stacked-bar-chart-ii",
+      "thumbnail": "efdcfaf7b41a9023e3ac022d9402ae7c39ed39345d5519be33b3b2e41108f9ef",
+      "title": "Radial stacked bar chart",
+      "author": "D3"
+    }
+  ],
+  "annotation": [{
+      "path": "@d3/inline-labels",
+      "thumbnail": "0c15ba0a824b63e2b031b7d45c28973beec940a6876f9d3e99c5119ab91dddeb",
+      "title": "Inline labels",
+      "author": "D3"
+    },
+    {
+      "path": "@harrystevens/directly-labelling-lines",
+      "thumbnail": "1fb683721dc358ccecf55e84386d5025a69d176517270f71a5143f5734a71c18",
+      "title": "Directly labelling lines",
+      "author": "Harry Stevens"
+    },
+    {
+      "path": "@d3/line-chart-with-tooltip",
+      "thumbnail": "e4e99ec69cb0edeb2eae11cd855439ddf6f1da0cd6181a222c6d3b2ffa8841a9",
+      "title": "Line chart with tooltip",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/voronoi-labels",
+      "thumbnail": "c1a6c5cbd331ff43b0aec5d5dbc7294dc95b9d5880bec11d97ca40ac6bb8067e",
+      "title": "Voronoi labels",
+      "author": "D3"
+    },
+    {
+      "path": "@fil/occlusion",
+      "thumbnail": "1c60a3f8bb58cd252d5d2893fc5d3a93345c9c9712c6d586acaabc0367aeede5",
+      "title": "Occlusion",
+      "author": "Fil"
+    },
+    {
+      "path": "@d3/graticule-labels-stereographic",
+      "thumbnail": "fd1336d8ced580b05a49499ca1b2d7a271762b7f9cd39dcc72345d7ff12b9f2c",
+      "title": "Graticule labels",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/styled-axes",
+      "thumbnail": "e30abc99319dfdeeed32324d2806fe67d99d635512b664993a7a1b1bd969d847",
+      "title": "Styled axes",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/color-legend",
+      "thumbnail": "239b95f0d187fbe3b6abf51a8d8a31f9cb55b5ff3f233b01d5418678b5a58624",
+      "title": "Color legend",
+      "author": "D3"
+    }
+  ],
+  "maps": [{
+      "path": "@d3/choropleth",
+      "thumbnail": "a9a0524cc739add09079120ca80f8f640eca51aa69a31b0cc9712aacca14d0a8",
+      "title": "Choropleth",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/bivariate-choropleth",
+      "thumbnail": "7db751d85c746604fbf945229f8e39edf717fa9d7cf5e61e4a5e4f27bb8e5821",
+      "title": "Bivariate choropleth",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/state-choropleth",
+      "thumbnail": "f691606ec5f71ba2d9bf2d460bf35fec8098e6f766c2f1e68e50d38f762ea943",
+      "title": "State choropleth",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/world-choropleth",
+      "thumbnail": "9b8e01454902b751ecbe72af2a0b1fcc1fd09dd0caa5f06f422e825ba14d8dcd",
+      "title": "World choropleth",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/world-map",
+      "thumbnail": "9202c28fb40879471231bd0cd718e09e263573552b45ba3292695dde63741038",
+      "title": "World map",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/projection-comparison",
+      "thumbnail": "9596c59b75461eab2e17f406c7caa6b0574e64e74aacab392167bf7eb469f6d1",
+      "title": "Projection comparison",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/tissots-indicatrix",
+      "thumbnail": "7713017d7d8ab67f3a03050f9fe57cefbcd7e078be65980f0b8d7e1446a0efb0",
+      "title": "Tissot’s indicatrix",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/web-mercator-tiles",
+      "thumbnail": "10c1fa83addf7308f42fe093008b4159e2a6c5eea37ad418820be9d3cd6b173c",
+      "title": "Web Mercator tiles",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/raster-tiles",
+      "thumbnail": "1f31ef7b286738354537ad9d892af7cd1163d6e26bb554f7ec43c0376b535949",
+      "title": "Raster tiles",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/vector-tiles",
+      "thumbnail": "e83f526b7a16a09b55a5128c9d1297a4b8c75da3bbc4f51a3db5ab0db30f1d77",
+      "title": "Vector tiles",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/clipped-map-tiles",
+      "thumbnail": "a40fc610857773f580618614dfee6e9802a3fce7338d936e3e275cec666dfcae",
+      "title": "Clipped map tiles",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/raster-vector",
+      "thumbnail": "8d3df3bf93bd745a4d4f1c07108e234cdb1907a3906d9fc1af7a4ca4d3a56c63",
+      "title": "Raster & vector",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/vector-field",
+      "thumbnail": "379f6a77c7dc953d5ed5e3711f1d567fcc49f81774c5e912725550b14425e786",
+      "title": "Vector field",
+      "author": "D3"
+    },
+    {
+      "path": "@d3/geotiff-contours-ii",
+      "thumbnail": "56c929e35ae92bd6a6f849d517a65f9bf717e84737d8ad0b9ce55f4e137f7783",
+      "title": "GeoTIFF contours",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/u-s-airports-voronoi",
+      "thumbnail": "95a220a84799748cd2f9382c5242b309f5c773fa547004f3ca52ee73e6a755ac",
+      "title": "U.S. airports voronoi",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/world-airports-voronoi",
+      "thumbnail": "dae9d704b154c37f3d9d93bb411d2656cceacd5407666163d174638e58469939",
+      "title": "World airports voronoi",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/solar-terminator",
+      "thumbnail": "a9f1dea4d6925972d23a3984812d2ba7822a189ebead2d1cb90c0a8162b9e1cf",
+      "title": "Solar terminator",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/solar-path",
+      "thumbnail": "b61d4ba0c713a936f295a1baa5f323c4ef0c69f19830991dbdcbd58627b60ca7",
+      "title": "Solar path",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/star-map",
+      "thumbnail": "2473d67d4c1cfb04231ad0f1f44b09e8f12651dc75bc6111540212b5681c720e",
+      "title": "Star map",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/non-contiguous-cartogram",
+      "thumbnail": "27308e079a4f30e91d0e7be7da4906aac12f4b7fc37538c311e56488de5d8448",
+      "title": "Non-contiguous cartogram",
+      "author": "D3"
+    }
+  ],
+  "essays": [{
+      "path": "@d3/d3-packenclose",
+      "thumbnail": "d0fb65df2bf57366e8ee434bfb58f53af90c0c1dc08b9ae1896b2e552c2166de",
+      "title": "d3.packEnclose",
+      "author": "D3"
+    },
+    {
+      "path": "@veltman/centerline-labeling",
+      "thumbnail": "6e7bcd6dd272a2e10278955d3433454257bf1bec4bada8176351782459ccd71d",
+      "title": "Centerline labeling",
+      "author": "Noah Veltman"
+    },
+    {
+      "path": "@mbostock/methods-of-comparison-compared",
+      "thumbnail": "a2e3592ee45761fbab31ea5bdb2457cc6ef4c45818992a9373baa6f933ec02ac",
+      "title": "Methods of comparison, compared",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/predator-and-prey",
+      "thumbnail": "87d0a25a33e487663bdeef7dd8f00a7fdb96d7c30fa6391fc10ab80738005eef",
+      "title": "Predator and prey",
+      "author": "Mike Bostock"
+    }
+  ],
+  "just-for-fun": [{
+      "path": "@mbostock/polar-clock",
+      "thumbnail": "da461cfada24f035d161d0fb9fe9b916ca706423761d45a293fd03a068bd3a77",
+      "title": "Polar clock",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/stern-brocot-tree",
+      "thumbnail": "3bb04e5fdf6e458fc557a3c840fedb0ad3cc8b8d22d7761f0c34446ec329d702",
+      "title": "Stern–brocot tree",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/voronoi-stippling",
+      "thumbnail": "b5ecef3d7a9bd01ebf80bbd388f92b0b93dae6c12c69ac18138f8c0da1da2fac",
+      "title": "Voronoi stippling",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@veltman/watercolor",
+      "thumbnail": "130ec2c8426f30ba91379740f2a36e5f2fa32e5154034168cf84213133788337",
+      "title": "Watercolor",
+      "author": "Noah Veltman"
+    },
+    {
+      "path": "@mbostock/psr-b1919-21",
+      "thumbnail": "cc12c3cfbaea71c89406a433684bfb890997c91d87d7376dc44ccc429a392697",
+      "title": "PSR B1919+21",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/logo",
+      "thumbnail": "197d170eda8f8cb7e9f6d877d96bbdbeaf748bd35cf057ecf0ed83f45019134e",
+      "title": "Logo",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/epicyclic-gearing",
+      "thumbnail": "1580acba5e90463cc8809b034a3d30a9c9c523f858b13c2a3f9dd328c18119fe",
+      "title": "Epicyclic gearing",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/owls-to-the-max",
+      "thumbnail": "460d8649a394bfc8afec5e7e534712f7f4910a42d7094ec483b0429d8eebf7b5",
+      "title": "Owls to the max",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/tadpoles",
+      "thumbnail": "c273105dec5e35ddc7147c4c49eb7a25372c02798658548d0ce9b0823ebe67a2",
+      "title": "Tadpoles",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/word-cloud",
+      "thumbnail": "bc9be17651dda21bd6a6053f2ba3b1a631d034f40a195c1c38eefff192e3f002",
+      "title": "Word cloud",
+      "author": "D3"
+    },
+    {
+      "path": "@mbostock/spilhaus-shoreline-map",
+      "thumbnail": "66a87355e205d820c4556bd80531c497229b8fa69bc2edcc04ad8366824be486",
+      "title": "Spilhaus shoreline map",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@mbostock/phases-of-the-moon",
+      "thumbnail": "0f81c94e11eb10b00c5d8d82cde88bd81e584c628a2862d45e2057289b6622fa",
+      "title": "Phases of the moon",
+      "author": "Mike Bostock"
+    },
+    {
+      "path": "@d3/color-schemes",
+      "thumbnail": "c680595bf8b26e4cb6bf2306c222a2ba9146f41dc0549c54e0b709a57d94cc87",
+      "title": "Color schemes",
+      "author": "D3"
+    }
+  ]
+}

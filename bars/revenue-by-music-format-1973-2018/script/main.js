@@ -25,10 +25,9 @@ const musicData = await fetch('./data/music.csv')
 
 const chart = musicChart(musicData);
 
-swatches(
-  chart.scales.color, {
-    width: 1000,
-    nColumns: 6,
-    textWidth: 250,
-    marginLeft: 30
-  })
+swatches(chart.scales.color, {
+  width: 1000,
+  nColumns: 6,
+  textWidth: 250,
+  marginLeft: 30
+});
