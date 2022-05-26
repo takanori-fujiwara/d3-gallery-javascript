@@ -67,14 +67,12 @@ export const scrubber = (values, {
   const formIPostUpdate = () => {
     const index = parseInt(formI.property('value'));
     if (event && event.isTrusted && running()) stop();
-    form.property('value', values[index]);
-    formO.property('value', format(form.property('value'), index, values));
+    formO.property('value', format(values[index], index, values));
 
     chartUpdate(index);
   }
 
   const step = () => {
-    formI.property('value', (parseInt(formI.property('value')) + direction + values.length) % values.length);
     formI.property('value', (parseInt(formI.property('value')) + direction + values.length) % values.length);
     formIPostUpdate();
   }

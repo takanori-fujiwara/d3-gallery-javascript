@@ -48,13 +48,14 @@ def load_info(dir_path):
     # extract functions from js script
     with open(main_file_path, 'r') as f:
         js_script = f.read()
-        js_func_scripts = js_script.split('function ')[1:]
+        js_func_scripts = js_script.split('function _')[1:]
 
     # extract 'head'
     for f_script in js_func_scripts:
         head_mark = '# '
         if head_mark in f_script:
             info['head'] = f_script.split(head_mark)[1].split('\n')[0]
+            js_func_scripts.remove(f_script)
             break
 
     # extract attached file name and path
@@ -71,31 +72,49 @@ def load_info(dir_path):
 
             info['attached_file_name'] = file_name
             info['attached_file_path'] = f'{dir_path}/{file_path}'
-
+            js_func_scripts.remove(f_script)
             break
 
     # extract var names of chart function and loaded data + attr for chart func
-    info['name']
     var_name_chart_func = _ds2cw(info['name'].split('/')[-1])
     var_name_data = 'data'
     attr_desc = ''
+    attr_desc += var_name_data
 
     info['var_name_chart_func'] = var_name_chart_func
     info['var_name_data'] = var_name_data
-    info['attr_desc_chart_func'] = attr_desc
 
     # extract cotent of chart function
     for f_script in js_func_scripts:
-        chart_func_mark = '_chart('
+        chart_func_mark = 'chart('
         if chart_func_mark in f_script:
-            chart_func_script = f'function {var_name_chart_func}({f_script.split(chart_func_mark)[1]}'
+            content = f_script.split(chart_func_mark)[1]
+            attrs = content[:content.find(')')].split(',')
+            content = content[content.find(')') + 1:]
 
-            # stop at return value
-            pos_return = chart_func_script.rfind('return')
-            chart_func_script = chart_func_script[:chart_func_script.
-                                                  find('\n', pos_return) + 1]
-            chart_func_script += '}'
+            attr_desc += ',{'
+            attr_desc += f'svgId = \'{_cw2ds(var_name_chart_func)}\','
+            for attr in attrs:
+                if attr == 'd3':
+                    None
+                elif attr == 'width':
+                    attr_desc += 'width = 800,'
+                elif attr == 'height':
+                    attr_desc += 'height = 800,'
+                else:
+                    attr_desc += f'{attr} = _{attr},'
+            attr_desc = attr_desc[:-1]  # remove last comma
+            attr_desc += '} = {}'
+            info['attr_desc_chart_func'] = attr_desc
+
+            chart_func_script = f'function {var_name_chart_func}({attr_desc}) {content}'
+
             info['script_chart_func'] = chart_func_script
+            js_func_scripts.remove(f_script)
+            break
+
+    # other function needed for main chart
+    info['scripts_other_functions'] = js_func_scripts
 
     return info
 
@@ -150,12 +169,33 @@ import {{
   {_var_name_chart_func}
 }} from './chart.js';
 
+import {{
+  scrubber
+}} from './scrubber.js';
+
 const {var_name_data} = await {d3_data_load_method}('./data/{attached_file_name}' {d3_data_load_metho_options});
 
-{_var_name_chart_func}({attr_desc_chart_func});
+const chart = {_var_name_chart_func}(data);
+
+
+d3.select('body').append(() => scrubberForm.node());
+d3.select('body').append(() => chart);
     '''
 
     return _beautify(script)
+
+
+def _convert_script_other_functions(scripts_other_functions):
+    script_other_functions = ''
+    for script in scripts_other_functions:
+        # change to arrow function
+        script = 'const _' + script
+        script = script[:script.find('(')] + ' = ' + script[script.find('('):]
+        script = script[:script.find(')') +
+                        1] + ' => ' + script[script.find(')') + 1:]
+        script_other_functions += script
+
+    return script_other_functions
 
 
 def _convert_script_chart_func(var_name_chart_func, script_chart_func):
@@ -181,8 +221,7 @@ def _convert_script_chart_func(var_name_chart_func, script_chart_func):
     # change d3 create to remove/append of svg
     script = script.replace(
         'const svg = d3.create("svg")',
-        'd3.select(\'body\').select(`svg#${svgId}`).remove();\n\n    const svg = d3.select(\'body\').append(\'svg\')\n    .attr(\'id\', svgId)'
-    )
+        'const svg = d3.create("svg")\n    .attr(\'id\', svgId)')
 
     # double quotes to single quotes
     script = script.replace('"', '\'')
@@ -190,7 +229,10 @@ def _convert_script_chart_func(var_name_chart_func, script_chart_func):
     return script
 
 
-def chart_js(page_name, var_name_chart_func, script_chart_func):
+def chart_js(page_name, var_name_chart_func, script_chart_func,
+             scripts_other_functions):
+    script_other_functions = _convert_script_other_functions(
+        scripts_other_functions)
     script_chart = _convert_script_chart_func(var_name_chart_func,
                                               script_chart_func)
     script = f'''
@@ -203,6 +245,7 @@ def chart_js(page_name, var_name_chart_func, script_chart_func):
 // Released under the ISC license.
 // https://observablehq.com/{page_name}
 
+{script_other_functions}
 {script_chart}
     '''
 
@@ -238,6 +281,8 @@ if __name__ == '__main__':
                     f'{script_dir_path}/d3.min.js')
     shutil.copyfile(f'{current_dir}/files/style.css',
                     f'{style_dir_path}/style.css')
+    shutil.copyfile(f'{current_dir}/files/scrubber.js',
+                    f'{script_dir_path}/scrubber.js')
 
     # copy data
     attached_file_name = info['attached_file_name']
@@ -261,4 +306,5 @@ if __name__ == '__main__':
         f.write(
             chart_js(page_name=info['name'],
                      var_name_chart_func=info['var_name_chart_func'],
-                     script_chart_func=info['script_chart_func']))
+                     script_chart_func=info['script_chart_func'],
+                     scripts_other_functions=info['scripts_other_functions']))
