@@ -10,5 +10,8 @@ hierarchies - treemap: dropdown
 animation - connected-scatterplot: push button
 animation - bar-chart-transitions: interval trigger
 animation - animated-treemap: scrubber
+animation - temporal-force-directed-graph: scrubber
+animation - the-wealth-health-of-nations: scrubber
+animation - scatterplot-tour: transition, radio, interval trigger
 interaction - index-chart: interval trigger
 analysis - bollinger-bands: text + slider

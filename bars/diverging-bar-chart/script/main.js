@@ -3,12 +3,12 @@ import {
 } from './chart.js';
 
 const data = await d3.tsv('./data/state-population-2010-2019.tsv');
-const radio_button_data = ['absolute', 'relative'];
+const radioButtonData = ['absolute', 'relative'];
 
 const form = d3.select('body').append('form').text('Change');
 
 const buttons = form.selectAll('span')
-  .data(radio_button_data)
+  .data(radioButtonData)
   .enter()
   .append('span');
 

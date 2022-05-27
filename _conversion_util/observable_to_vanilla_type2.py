@@ -154,7 +154,9 @@ def simple_main_js(var_name_chart_func,
                    d3_data_load_method='auto',
                    d3_data_load_metho_options=', d3.autoType'):
     if d3_data_load_method == 'auto':
-        file_extension = attached_file_name.split('.')[1]
+        file_extension = 'json'
+        if len(attached_file_name.split('.')) > 1:
+            file_extension = attached_file_name.split('.')[1]
         d3_data_load_method = f'd3.{file_extension}'
 
     # use lower the first char to follow the naming convention
@@ -285,9 +287,12 @@ if __name__ == '__main__':
                     f'{script_dir_path}/scrubber.js')
 
     # copy data
-    attached_file_name = info['attached_file_name']
-    shutil.copyfile(info['attached_file_path'],
-                    f'{data_dir_path}/{attached_file_name}')
+    if 'attached_file_name' in info.keys():
+        attached_file_name = info['attached_file_name']
+        shutil.copyfile(info['attached_file_path'],
+                        f'{data_dir_path}/{attached_file_name}')
+    else:
+        info['attached_file_name'] = ''
 
     # generate index.html
     with open(f'{output_dir_path}/index.html', 'w') as f:
