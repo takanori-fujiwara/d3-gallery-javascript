@@ -13,5 +13,6 @@ animation - animated-treemap: scrubber
 animation - temporal-force-directed-graph: scrubber
 animation - the-wealth-health-of-nations: scrubber
 animation - scatterplot-tour: transition, radio, interval trigger
+animation - bar-chart-race: play animation with await transition, push button
 interaction - index-chart: interval trigger
 analysis - bollinger-bands: text + slider

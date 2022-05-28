@@ -16,12 +16,14 @@ export const simulationTimeout = new Promise((resolve, reject) => {
 
 export const temporalForceDirectedGraph = ({
   svgId = 'temporal-force-directed-graph',
-  width = 800,
-  height = 800,
+  width = 600,
+  height = 600,
   invalidation = simulationTimeout
 } = {}) => {
   const svg = d3.create('svg')
     .attr('id', svgId)
+    .attr('width', width)
+    .attr('height', height)
     .attr('viewBox', [-width / 2, -height / 2, width, height]);
 
   let link = svg.append('g')

@@ -86,7 +86,9 @@ export const theWealthHealthOfNations = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
-    .attr('viewBox', [0, 0, width * 1.5, height * 1.5]);
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height]);
 
   svg.append('g')
     .call(xAxis);

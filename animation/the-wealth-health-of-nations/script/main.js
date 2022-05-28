@@ -63,8 +63,8 @@ d3.select('body').append(() => scrubberForm.node());
 d3.select('body').append(() => chart);
 
 swatches(chart.scales.color, {
-  width: 1000,
-  nColumns: 6,
-  textWidth: 250,
+  width: 400,
+  nColumns: 3,
+  textWidth: 150,
   marginLeft: 30
 });

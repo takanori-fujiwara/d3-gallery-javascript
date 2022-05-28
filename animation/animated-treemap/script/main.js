@@ -41,4 +41,4 @@ const scrubberForm = scrubber(d3.range(data.keys.length), {
 });
 
 d3.select('body').append(() => scrubberForm.node());
-d3.select('body').append(() => chart).attr('width', 750);
+d3.select('body').append(() => chart)

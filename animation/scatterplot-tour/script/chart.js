@@ -28,7 +28,9 @@ export const scatterplotTour = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
-    .attr('viewBox', [0, 0, width * 1.5, height * 1.5]);
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height]);
 
   const g = svg.append('g')
     .attr('fill', 'none')

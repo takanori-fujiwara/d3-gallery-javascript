@@ -28,8 +28,8 @@ const uid = genUid();
 export const animatedTreemap = (data, {
   svgId = 'animated-treemap',
   timeIndex = 0,
-  width = 800,
-  height = 800,
+  width = 600,
+  height = 600,
   max = d3.max(data.keys.map((d, i) => d3.hierarchy(data.group).sum(d => d.values[i]).value)),
   formatNumber = d3.format(',d'),
   color = d3.scaleOrdinal(data.group.keys(), d3.schemeCategory10.map(d => d3.interpolateRgb(d, 'white')(0.5))),
@@ -49,6 +49,8 @@ export const animatedTreemap = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
+    .attr('width', width)
+    .attr('height', height)
     .attr('viewBox', `0 -20 ${width} ${height + 20}`)
     .attr('font-family', 'sans-serif')
     .attr('font-size', 10)
