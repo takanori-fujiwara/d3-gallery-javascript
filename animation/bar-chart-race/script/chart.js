@@ -196,7 +196,7 @@ export const barChartRace = (data, {
         updateLabels(keyframe, transition);
         updateTicker(keyframe, transition);
 
-        await transition.end()
+        await transition.end();
       }
     }
   });
