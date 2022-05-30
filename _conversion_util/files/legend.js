@@ -205,7 +205,7 @@ export const swatches = (color, {
     .attr('dx', 3)
     .attr('dy', '.35em')
     .style('vertical-align', 'middle')
-    .text(d => d);
+    .text(d => format(d));
 
   return svg.node();
 }
