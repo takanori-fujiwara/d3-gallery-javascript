@@ -9,12 +9,14 @@ networks - sankey: dropdown
 hierarchies - treemap: dropdown
 animation - connected-scatterplot: push button
 animation - bar-chart-transitions: interval trigger
-animation - animated-treemap: scrubber
+animation - animated-treemap: scrubber, DOM.uid
 animation - temporal-force-directed-graph: scrubber
 animation - the-wealth-health-of-nations: scrubber
 animation - scatterplot-tour: transition, radio, interval trigger
 animation - bar-chart-race: play animation with await transition, push button
 animation - stacked-to-grouped-bars: transition, radio, interval trigger
 animation - streamgraph-transitions: dropdown, transition with await
+animation - walmarts-growth: scrubber
+animation - zoomable-treemap: DOM.uid
 interaction - index-chart: interval trigger
 analysis - bollinger-bands: text + slider

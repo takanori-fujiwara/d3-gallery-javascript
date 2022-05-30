@@ -85,6 +85,8 @@ def load_info(dir_path):
     info['var_name_data'] = var_name_data
 
     # extract cotent of chart function
+    info['attr_desc_chart_func'] = ''
+    info['script_chart_func'] = ''
     for f_script in js_func_scripts:
         chart_func_mark = 'chart('
         if chart_func_mark in f_script:
