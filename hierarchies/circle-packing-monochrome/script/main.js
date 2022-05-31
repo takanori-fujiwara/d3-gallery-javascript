@@ -20,8 +20,7 @@ const chart = pack(flare, {
   link: (d, n) => n.children ?
     `https://github.com/prefuse/Flare/tree/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join('/')}` : `https://github.com/prefuse/Flare/blob/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join('/')}.as`,
   width: 1152,
-  height: 1152,
-  color: d3.scaleSequential([8, 0], d3.interpolateMagma)
+  height: 1152
 });
 
 d3.select('body').append(() => chart);

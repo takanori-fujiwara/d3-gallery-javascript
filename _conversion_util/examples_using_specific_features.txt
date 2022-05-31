@@ -7,6 +7,8 @@ dots - dot-plot: dropdown, interval trigger
 networks - force-directed-graph: invalidation/timeout
 networks - sankey: dropdown
 hierarchies - treemap: dropdown
+hierarchies - cascaded-treemap: DOM.uid
+hierarchies - tree-of-life: checkbox
 animation - connected-scatterplot: push button
 animation - bar-chart-transitions: interval trigger
 animation - animated-treemap: scrubber, DOM.uid, promise for files

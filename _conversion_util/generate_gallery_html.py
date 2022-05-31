@@ -19,6 +19,7 @@ def gen_examples_html(category_key):
     names_changed = {
         'calendar-view': 'calendar',
         'sortable-bar-chart': 'bar-chart-transitions',
+        'circle-packing': 'pack',
         'tidy-tree': 'tree',
         'radial-tidy-tree': 'radial-tree',
         'cluster-dendrogram': 'cluster',
