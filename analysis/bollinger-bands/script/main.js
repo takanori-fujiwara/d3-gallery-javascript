@@ -26,7 +26,7 @@ const sliderInputN = inputAreaN.insert('input')
   .attr('step', 1)
   .attr('value', defaultN)
 sliderInputN
-  .on('input', () => d3.select('input[id="sliderInputN"]').attr('value'));
+  .on('input', () => sliderInputN.attr('value'));
 
 const inputAreaK = d3.select('body').append('div').text('Deviations (K) ');
 const textInputK = inputAreaK.insert('input')
@@ -44,7 +44,7 @@ const sliderInputK = inputAreaK.insert('input')
   .attr('step', 0.1)
   .attr('value', defaultK)
 sliderInputK
-  .on('input', () => d3.select('input[id="sliderInputK"]').attr('value'));
+  .on('input', () => sliderInputK.attr('value'));
 
 const updateChart = (N, K) => {
   bollingerChart(aapl, {
@@ -63,45 +63,45 @@ updateChart(defaultN, defaultK);
 
 // when updated
 textInputN.on('input', () => {
-  const newN = parseInt(d3.select('input[id="textInputN"]').property('value'));
-  const currentK = parseFloat(d3.select('input[id="textInputK"]').property('value'));
+  const newN = parseInt(textInputN.property('value'));
+  const currentK = parseFloat(textInputK.property('value'));
 
   if (newN) {
     updateChart(newN, currentK);
-    d3.select('input[id="textInputN"]').property('value', newN.toString());
-    d3.select('input[id="sliderInputN"]').property('value', newN.toString());
+    textInputN.property('value', newN.toString());
+    sliderInputN.property('value', newN.toString());
   }
 });
 
 sliderInputN.on('input', () => {
-  const newN = parseInt(d3.select('input[id="sliderInputN"]').property('value'));
-  const currentK = parseFloat(d3.select('input[id="sliderInputK"]').property('value'));
+  const newN = parseInt(sliderInputN.property('value'));
+  const currentK = parseFloat(sliderInputK.property('value'));
 
   if (newN) {
     updateChart(newN, currentK);
-    d3.select('input[id="textInputN"]').property('value', newN.toString());
-    d3.select('input[id="sliderInputN"]').property('value', newN.toString());
+    textInputN.property('value', newN.toString());
+    sliderInputN.property('value', newN.toString());
   }
 });
 
 textInputK.on('input', () => {
-  const currentN = parseInt(d3.select('input[id="textInputN"]').property('value'));
-  const newK = parseFloat(d3.select('input[id="textInputK"]').property('value'));
+  const currentN = parseInt(textInputN.property('value'));
+  const newK = parseFloat(textInputK.property('value'));
 
   if (newK) {
     updateChart(currentN, newK);
-    d3.select('input[id="textInputK"]').property('value', newK.toString());
-    d3.select('input[id="sliderInputK"]').property('value', newK.toString());
+    textInputK.property('value', newK.toString());
+    sliderInputK.property('value', newK.toString());
   }
 });
 
 sliderInputK.on('input', () => {
-  const currentN = parseInt(d3.select('input[id="sliderInputN"]').property('value'));
-  const newK = parseFloat(d3.select('input[id="sliderInputK"]').property('value'));
+  const currentN = parseInt(sliderInputN.property('value'));
+  const newK = parseFloat(sliderInputK.property('value'));
 
   if (newK) {
     updateChart(currentN, newK);
-    d3.select('input[id="textInputK"]').property('value', newK.toString());
-    d3.select('input[id="sliderInputK"]').property('value', newK.toString());
+    textInputK.property('value', newK.toString());
+    sliderInputK.property('value', newK.toString());
   }
 });

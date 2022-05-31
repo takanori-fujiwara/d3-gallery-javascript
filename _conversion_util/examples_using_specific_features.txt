@@ -20,4 +20,8 @@ animation - walmarts-growth: scrubber
 animation - zoomable-treemap: DOM.uid
 interaction - index-chart: interval trigger
 interaction - zoomable-area-chart: DOM.uid
+interaction - moving-average: number input
+interaction - kernel-density-estimation: number input + slider
+interaction - hexbin: slider
+interaction - hexbin-area: slider, dropdown
 analysis - bollinger-bands: text + slider
