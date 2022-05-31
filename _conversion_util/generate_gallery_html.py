@@ -15,6 +15,7 @@ def gen_examples_html(category_key):
         'centerline-labeling', 'methods-of-comparison-compared', 'watercolor'
         'stern-brocot-tree', 'owls-to-the-max', 'spilhaus-shoreline-map'
     ]
+    licence_conflict_gpl = ['versor-dragging']
     names_changed = {
         'calendar-view': 'calendar',
         'sortable-bar-chart': 'bar-chart-transitions',
@@ -43,20 +44,23 @@ def gen_examples_html(category_key):
             name = names_changed[name]
 
         title = each_info['title']
-
+        href = '#'
         if os.path.isdir(f'../{category_key}/{name}/'):
             thumbnail = name
             counts['done'] += 1
+            href = f'./{category_key}/{name}/'
         elif name in nolicense:
             thumbnail = 'no-license'
+            counts['pending'] += 1
+        elif name in licence_conflict_gpl:
+            thumbnail = 'gpl-conflict'
             counts['pending'] += 1
         else:
             thumbnail = 'not-implemented'
             counts['todo'] += 1
-
         html += f'''
       <div class='thumbnail'>
-        <a href='./{category_key}/{name}/'>
+        <a href=\'{href}\'>
           <img src='./_thumbnails/{thumbnail}.png'>
           <p>{title}</p>
         </a>

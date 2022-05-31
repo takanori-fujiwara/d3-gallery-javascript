@@ -173,16 +173,10 @@ import {{
   {_var_name_chart_func}
 }} from './chart.js';
 
-import {{
-  scrubber
-}} from './scrubber.js';
-
 const {var_name_data} = await {d3_data_load_method}('./data/{attached_file_name}' {d3_data_load_metho_options});
 
 const chart = {_var_name_chart_func}(data);
 
-
-d3.select('body').append(() => scrubberForm.node());
 d3.select('body').append(() => chart);
     '''
 
@@ -225,7 +219,8 @@ def _convert_script_chart_func(var_name_chart_func, script_chart_func):
     # change d3 create to remove/append of svg
     script = script.replace(
         'const svg = d3.create("svg")',
-        'const svg = d3.create("svg")\n    .attr(\'id\', svgId)')
+        'const svg = d3.create("svg")\n    .attr(\'id\', svgId)\n    .attr(\'width\', width)\n    .attr(\'height\', height)'
+    )
 
     # double quotes to single quotes
     script = script.replace('"', '\'')
@@ -252,6 +247,12 @@ def chart_js(page_name, var_name_chart_func, script_chart_func,
 {script_other_functions}
 {script_chart}
     '''
+
+    # change margin.top, right, bottom, bottom
+    script = script.replace('margin.top', 'marginTop')
+    script = script.replace('margin.right', 'marginRight')
+    script = script.replace('margin.bottom', 'marginBottom')
+    script = script.replace('margin.left', 'marginLeft')
 
     opts = jsbeautifier.default_options()
     opts.indent_size = 2
@@ -285,8 +286,8 @@ if __name__ == '__main__':
                     f'{script_dir_path}/d3.min.js')
     shutil.copyfile(f'{current_dir}/files/style.css',
                     f'{style_dir_path}/style.css')
-    shutil.copyfile(f'{current_dir}/files/scrubber.js',
-                    f'{script_dir_path}/scrubber.js')
+    # shutil.copyfile(f'{current_dir}/files/scrubber.js',
+    #                 f'{script_dir_path}/scrubber.js')
 
     # copy data
     if 'attached_file_name' in info.keys():
