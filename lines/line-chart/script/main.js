@@ -7,7 +7,7 @@ import {
 
 const appl = await d3.csv('./data/aapl.csv', d3.autoType);
 
-lineChart(appl, {
+const chart = lineChart(appl, {
   x: d => d.date,
   y: d => d.close,
   yLabel: '↑ Daily close ($)',
@@ -15,3 +15,5 @@ lineChart(appl, {
   height: 500,
   color: 'steelblue'
 });
+
+d3.select('body').append(() => chart);

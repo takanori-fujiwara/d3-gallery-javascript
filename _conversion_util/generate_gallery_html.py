@@ -27,7 +27,8 @@ def gen_examples_html(category_key):
         'sankey-diagram': 'sankey',
         'scatterplot-matrix': 'splom',
         'beeswarm-ii': 'beeswarm-mirrored',
-        'line-chart-with-tooltip': 'line-with-tooltip'
+        'line-chart-with-tooltip': 'line-with-tooltip',
+        '2': 'hierarchical-edge-bundling-2'
     }
 
     title = category_key.replace('-', ' ')

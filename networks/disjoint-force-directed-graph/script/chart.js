@@ -36,7 +36,11 @@ export const forceGraph = ({
   colors = d3.schemeTableau10, // an array of color strings, for the node groups
   width = 640, // outer width, in pixels
   height = 400, // outer height, in pixels
-  invalidation // when this promise resolves, stop the simulation
+  invalidation = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, 8000); // simulation will be stopped after 8 sec
+  })
 } = {}) => {
   const intern = value => value !== null && typeof value === 'object' ? value.valueOf() : value;
 
@@ -72,9 +76,7 @@ export const forceGraph = ({
   if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
   if (linkStrength !== undefined) forceLink.strength(linkStrength);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
@@ -124,7 +126,7 @@ export const forceGraph = ({
   const drag = simulation => {
     const dragstarted = event => {
       if (!event.active) simulation.alphaTarget(0.3).restart();
-      if (invalidation != null) invalidation().then(() => simulation.stop());
+      if (invalidation != null) invalidation.then(() => simulation.stop());
       event.subject.fx = event.subject.x;
       event.subject.fy = event.subject.y;
     }
@@ -156,7 +158,7 @@ export const forceGraph = ({
   }) => T[i]);
 
   // Handle invalidation.
-  if (invalidation != null) invalidation().then(() => simulation.stop());
+  if (invalidation != null) invalidation.then(() => simulation.stop());
 
   return Object.assign(svg.node(), {
     scales: {

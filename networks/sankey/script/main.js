@@ -19,7 +19,6 @@ const nodeAlignOptions = ['left', 'right', 'center', 'justify'];
 const nodeAlignDefault = 'justify';
 
 const dropDownSelectLinkColor = d3.select('body').append('div').text('Link color ').append('select');
-dropDownSelectLinkColor.attr('id', 'dropDownSelectLinkColor')
 dropDownSelectLinkColor.selectAll('option')
   .data(linkColorOptions)
   .enter()
@@ -29,7 +28,6 @@ dropDownSelectLinkColor.selectAll('option')
   .property('selected', d => d[0] === linkColorDefault);
 
 const dropDownSelectNodeAlign = d3.select('body').append('div').text('Node alignment ').append('select');
-dropDownSelectNodeAlign.attr('id', 'dropDownSelectNodeAlign')
 dropDownSelectNodeAlign.selectAll('option')
   .data(nodeAlignOptions)
   .enter()
@@ -39,9 +37,12 @@ dropDownSelectNodeAlign.selectAll('option')
   .property('selected', d => d === nodeAlignDefault);
 
 const updateChart = (nodeAlign, linkColor) => {
-  sankeyChart({
+  d3.select('#sankey-chart').remove();
+
+  const chart = sankeyChart({
     links: energy
   }, {
+    svgId: 'sankey-chart',
     nodeGroup: d => d.id.split(/\W/)[0], // take first word for color
     nodeAlign: nodeAlign, // e.g., d3.sankeyJustify; set by input above ##########
     linkColor: linkColor, // e.g., 'source' or 'target'; set by input above ##########
@@ -49,6 +50,7 @@ const updateChart = (nodeAlign, linkColor) => {
     width: 1000,
     height: 600
   });
+  d3.select('body').append(() => chart);
 }
 
 // initial state
@@ -56,13 +58,13 @@ updateChart(nodeAlignDefault, linkColorDefault);
 
 // when updated
 dropDownSelectLinkColor.on('change', () => {
-  const newLinkColor = d3.select('select[id="dropDownSelectLinkColor"]').property('value');
-  const currentNodeAlign = d3.select('select[id="dropDownSelectNodeAlign"]').property('value');
+  const newLinkColor = dropDownSelectLinkColor.property('value');
+  const currentNodeAlign = dropDownSelectNodeAlign.property('value');
   updateChart(currentNodeAlign, newLinkColor);
 });
 
 dropDownSelectNodeAlign.on('change', () => {
-  const currentLinkColor = d3.select('select[id="dropDownSelectLinkColor"]').property('value');
-  const newNodeAlign = d3.select('select[id="dropDownSelectNodeAlign"]').property('value');
+  const currentLinkColor = dropDownSelectLinkColor.property('value');
+  const newNodeAlign = dropDownSelectNodeAlign.property('value');
   updateChart(newNodeAlign, currentLinkColor);
 });

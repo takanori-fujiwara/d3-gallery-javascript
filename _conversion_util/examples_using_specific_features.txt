@@ -2,10 +2,18 @@ bars - calender: dropdown
 bars - diverging-bar-chart: radio
 lines - change-line-chart: text + slider
 lines - multi-line-chart: checkbox
+lines - mareys-trains: dropdown x2
+lines - variable-color-line: gradient color
+lines - gradient-encoding: gradient color
+lines - threshold-encoding: thresholding color
+lines - parallel-coordinates: dropdown
+lines - inequality-in-american-cities: stroke legend
+lines - new-zealand-tourists-1921-2018: radio
 areas - horizon-chart: dropdown, text + slider
 dots - dot-plot: dropdown, interval trigger
 networks - force-directed-graph: invalidation/timeout
 networks - sankey: dropdown
+networks - arc-diagram: dropdown + invalidation/timeout
 hierarchies - treemap: dropdown
 hierarchies - cascaded-treemap: DOM.uid
 hierarchies - tree-of-life: checkbox

@@ -8,13 +8,15 @@ import {
 const unemployment = await d3.csv('./data/bls-metro-unemployment.csv', d3.autoType);
 
 const form = d3.select('body').append('form').text('Show voronoi');
-form.append('input')
+const input = form.append('input')
   .attr('type', 'checkbox')
   .attr('id', 'voronoi')
   .property('checked', false);
 
 const updateChart = (voronoi) => {
-  lineChart(unemployment, {
+  d3.select('#line-chart').remove();
+  const chart = lineChart(unemployment, {
+    svgId: 'line-chart',
     x: d => d.date,
     y: d => d.unemployment,
     z: d => d.division,
@@ -23,13 +25,14 @@ const updateChart = (voronoi) => {
     height: 500,
     color: "steelblue",
     voronoi: voronoi // if true, show Voronoi overlay
-  })
+  });
+  d3.select('body').append(() => chart);
 }
 
 // initial state
-updateChart(d3.select('input[id="voronoi"]').property("checked"));
+updateChart(input.property("checked"));
 
 // when updated
 form.on('change', () => {
-  updateChart(d3.select('input[id="voronoi"]').property("checked"));
+  updateChart(input.property("checked"));
 });

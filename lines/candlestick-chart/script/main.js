@@ -7,7 +7,7 @@ import {
 
 const aapl = await d3.csv('./data/aapl-2.csv', d3.autoType).then(data => data.slice(-120));
 
-candlestickChart(aapl, {
+const chart = candlestickChart(aapl, {
   date: d => d.Date,
   high: d => d.High,
   low: d => d.Low,
@@ -17,3 +17,5 @@ candlestickChart(aapl, {
   width: 1000,
   height: 500
 });
+
+d3.select('body').append(() => chart);
