@@ -103,9 +103,7 @@ export const beeswarmChart = (data, {
   // Compute the default height;
   if (height === undefined) height = d3.max(Y) + (radius + padding) * 2 + marginTop + marginBottom;
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

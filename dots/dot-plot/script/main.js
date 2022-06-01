@@ -37,6 +37,8 @@ const chart = dotPlot(stateage, {
   width: 1000
 });
 
+d3.select('body').append(() => chart);
+
 legend(chart.color, {
   title: 'Age (years)'
 })

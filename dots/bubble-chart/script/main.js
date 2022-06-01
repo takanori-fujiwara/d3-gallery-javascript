@@ -27,6 +27,8 @@ const chart = bubbleChart(files, {
   width: 1152
 });
 
+d3.select('body').append(() => chart);
+
 swatches(chart.scales.color, {
   textWidth: 60
 })

@@ -65,9 +65,7 @@ export const dotPlot = (data, {
   const color = d3.scaleOrdinal(zDomain, colors);
   const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

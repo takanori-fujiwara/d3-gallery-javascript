@@ -7,9 +7,11 @@ import {
 
 const cars = await d3.csv('./data/cars.csv', d3.autoType);
 
-beeswarmChart(cars, {
+const chart = beeswarmChart(cars, {
   x: d => d.Weight_in_lbs,
   xLabel: 'Weight (lbs.) →',
   title: d => d.Name,
   width: 800
 });
+
+d3.select('body').append(() => chart);

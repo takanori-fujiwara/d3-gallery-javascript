@@ -7,7 +7,7 @@ import {
 
 const cars = await d3.csv('./data/mtcars.csv', d3.autoType);
 
-scatterplot(cars, {
+const chart = scatterplot(cars, {
   x: d => d.mpg,
   y: d => d.hp,
   title: d => d.name,
@@ -17,3 +17,5 @@ scatterplot(cars, {
   width: 1000,
   height: 600
 });
+
+d3.select('body').append(() => chart);
