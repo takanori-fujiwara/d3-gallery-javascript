@@ -60,9 +60,7 @@ export const differenceChart = (data, {
   const line = (y) => d3.line().defined(i => D[i]).curve(curve).x(i => xScale(X[i])).y(y)(I);
   const area = (y0, y1) => d3.area().defined(i => D[i]).curve(curve).x(i => xScale(X[i])).y0(y0).y1(y1)(I);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

@@ -7,7 +7,7 @@ import {
 
 const weather = await d3.csv('./data/weather.csv', d3.autoType);
 
-differenceChart(weather, {
+const chart = differenceChart(weather, {
   x: d => d.date,
   y1: d => d["New York"],
   y2: d => d["San Francisco"],
@@ -17,3 +17,5 @@ differenceChart(weather, {
   width: 1000,
   height: 600
 });
+
+d3.select('body').append(() => chart);

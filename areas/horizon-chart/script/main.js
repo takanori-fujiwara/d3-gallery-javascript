@@ -60,7 +60,8 @@ sliderInput
   .on('input', () => d3.select('input[id="sliderInput"]').attr('value'));
 
 const updateChart = (bands, scheme) => {
-  horizonChart(traffic, {
+  const chart = horizonChart(traffic, {
+    svgId: 'horizon-chart',
     x: d => d.date,
     y: d => d.value,
     z: d => d.name,
@@ -68,6 +69,8 @@ const updateChart = (bands, scheme) => {
     width: 1000,
     scheme: scheme
   });
+  d3.select('#horizon-chart').remove();
+  d3.select('body').append(() => chart);
 }
 
 // initial state

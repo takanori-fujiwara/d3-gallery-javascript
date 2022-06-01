@@ -23,6 +23,8 @@ const chart = stackedAreaChart(unemployment, {
   height: 600
 });
 
+d3.select('body').append(() => chart);
+
 swatches(chart.scales.color, {
   textWidth: 200,
   nColumns: 5

@@ -56,9 +56,7 @@ export const bandChart = (data, {
     .y0(i => yScale(Y1[i]))
     .y1(i => yScale(Y2[i]));
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

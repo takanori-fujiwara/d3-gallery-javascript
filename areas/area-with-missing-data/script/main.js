@@ -10,7 +10,7 @@ const aaplMissing = (await d3.csv('./data/aapl.csv', d3.autoType)).map(d => ({
   close: d.date.getUTCMonth() < 3 ? NaN : d.close
 })) // simulate gaps;
 
-areaChart(aaplMissing, {
+const chart = areaChart(aaplMissing, {
   x: d => d.date,
   y: d => d.close,
   yLabel: "↑ Daily close ($)",
@@ -18,3 +18,5 @@ areaChart(aaplMissing, {
   height: 500,
   color: "steelblue"
 });
+
+d3.select('body').append(() => chart);

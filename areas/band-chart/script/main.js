@@ -7,7 +7,7 @@ import {
 
 const temperatures = await d3.csv('./data/temperatures.csv', d3.autoType);
 
-bandChart(temperatures, {
+const chart = bandChart(temperatures, {
   x: d => d.date,
   y1: d => d.low,
   y2: d => d.high,
@@ -17,3 +17,5 @@ bandChart(temperatures, {
   width: 1000,
   height: 600
 });
+
+d3.select('body').append(() => chart);
