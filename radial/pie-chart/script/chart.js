@@ -56,9 +56,7 @@ export const pieChart = (data, {
   const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
   const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

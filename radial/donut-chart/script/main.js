@@ -7,9 +7,11 @@ import {
 
 const population = await d3.csv('./data/population-by-age.csv', d3.autoType);
 
-donutChart(population, {
+const chart = donutChart(population, {
   name: d => d.name,
   value: d => d.value,
   width: 1000,
   height: 500
 });
+
+d3.select('body').append(() => chart);
