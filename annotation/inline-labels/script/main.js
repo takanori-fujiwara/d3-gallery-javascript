@@ -7,10 +7,12 @@ import {
 
 const sales = await d3.csv('./data/fruit-sales.csv', d3.autoType);
 
-inlineChart(sales, {
+const chart = inlineChart(sales, {
   x: d => d.date,
   y: d => d.sales,
   z: d => d.fruit,
   width: 1000,
   height: 500
 });
+
+d3.select('body').append(() => chart);

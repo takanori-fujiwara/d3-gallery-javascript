@@ -139,6 +139,7 @@ def index_html(head, name):
 </html>
     '''
 
+    # <script src='./script/topojson.min.js'></script>
     return html
 
 
@@ -288,6 +289,8 @@ if __name__ == '__main__':
                     f'{style_dir_path}/style.css')
     # shutil.copyfile(f'{current_dir}/files/scrubber.js',
     #                 f'{script_dir_path}/scrubber.js')
+    # shutil.copyfile(f'{current_dir}/files/topojson.min.js',
+    #                 f'{script_dir_path}/topojson.min.js')
 
     # copy data
     if 'attached_file_name' in info.keys():

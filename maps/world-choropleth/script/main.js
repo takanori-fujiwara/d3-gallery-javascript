@@ -66,6 +66,8 @@ const chart = choropleth(hale, {
   projection: d3.geoEqualEarth()
 });
 
+d3.select('body').append(() => chart);
+
 legend(chart.scales.color, {
   title: 'Healthy life expectancy (years)'
 });

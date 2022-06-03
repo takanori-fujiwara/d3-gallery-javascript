@@ -22,7 +22,11 @@ export const wordCloud = (text, {
   fontScale = 15, // base font size
   padding = 0, // amount of padding between the words (in pixels)
   rotate = 0, // a constant or function to rotate the words
-  invalidation // when this promise resolves, stop the simulation
+  invalidation = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, 60000)
+  }) // when this promise resolves, stop the simulation
 } = {}) => {
   const words = typeof text === "string" ? text.split(/\W+/g) : Array.from(text);
 
@@ -34,9 +38,7 @@ export const wordCloud = (text, {
       size
     }));
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr("viewBox", [0, 0, width, height])
     .attr("width", width)
@@ -67,6 +69,6 @@ export const wordCloud = (text, {
     });
 
   cloud.start();
-  invalidation && invalidation().then(() => cloud.stop());
+  invalidation && invalidation.then(() => cloud.stop());
   return svg.node();
 }

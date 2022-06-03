@@ -13,7 +13,9 @@ def gen_examples_html(category_key):
     nolicense = [
         'world-history-timeline', 'cancer-survival-rates', 'occlusion',
         'centerline-labeling', 'methods-of-comparison-compared', 'watercolor'
-        'stern-brocot-tree', 'owls-to-the-max', 'spilhaus-shoreline-map'
+        'owls-to-the-max', 'spilhaus-shoreline-map', 'stern-brocot-tree',
+        'watercolor', 'stern-brocot-tree', 'owls-to-the-max',
+        'spilhaus-shoreline-map', 'occlusion'
     ]
     licence_conflict_gpl = ['versor-dragging']
     names_changed = {
