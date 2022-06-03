@@ -19,7 +19,7 @@ const data = {
 
 const chart = mobilePatentSuits(data);
 
-d3.select('body').append(() => chart);
+const chartSwatches = swatches(chart.scales.color);
 
-console.log(chart.scales.color);
-swatches(chart.scales.color);
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);

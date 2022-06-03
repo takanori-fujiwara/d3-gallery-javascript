@@ -58,9 +58,10 @@ const chart = treeOfLife(data, {
   showLength: d3.select('input[id="showLength"]').property('checked')
 });
 
-d3.select('body').style('clear', 'both').append(() => chart);
+const chartSwatches = swatches(chart.scales.color);
 
-swatches(chart.scales.color);
+d3.select('body').style('clear', 'both').append(() => chart);
+d3.select('body').style('clear', 'both').append(() => chartSwatches);
 
 // when updated
 form.on('change', () => {

@@ -59,9 +59,7 @@ export const tree = (data, { // data is either tabular (array of objects) or hie
   // Compute the layout.
   tree().size([2 * Math.PI, radius]).separation(separation)(root);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('viewBox', [-marginLeft - radius, -marginTop - radius, width, height])
     .attr('width', width)

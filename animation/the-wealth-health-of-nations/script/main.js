@@ -59,12 +59,13 @@ const scrubberForm = scrubber(dates, {
   format: d => d.getUTCFullYear()
 });
 
-d3.select('body').append(() => scrubberForm.node());
-d3.select('body').append(() => chart);
-
-swatches(chart.scales.color, {
+const chartSwatches = swatches(chart.scales.color, {
   width: 400,
   nColumns: 3,
   textWidth: 150,
   marginLeft: 30
 });
+
+d3.select('body').append(() => scrubberForm.node());
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);

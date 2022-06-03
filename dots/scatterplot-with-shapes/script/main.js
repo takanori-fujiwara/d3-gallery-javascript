@@ -24,6 +24,7 @@ const data = Object.assign(d3.csvParse(await d3.text('./data/iris.csv'), ({
 
 const chart = scatterplotWithShapes(data);
 
-d3.select('body').append(() => chart);
+const chartSwatches = swatches(chart.scales.color);
 
-swatches(chart.scales.color);
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);

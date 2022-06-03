@@ -37,11 +37,12 @@ const chart = dotPlot(stateage, {
   width: 1000
 });
 
-d3.select('body').append(() => chart);
-
-legend(chart.color, {
+const chartLegend = legend(chart.color, {
   title: 'Age (years)'
-})
+});
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);
 
 const updateChart = () => {
   const order = d3.select('select[id="dropDownSelect"]').property('value');

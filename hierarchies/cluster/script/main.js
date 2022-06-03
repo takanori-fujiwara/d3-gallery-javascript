@@ -7,7 +7,7 @@ import {
 
 const flare = await d3.json('./data/flare.json', d3.autoType);
 
-tree(flare, {
+const chart = tree(flare, {
   label: d => d.name,
   title: (d, n) => `${n.ancestors().reverse().map(d => d.data.name).join(".")}`, // hover text
   link: (d, n) => `https://github.com/prefuse/Flare/${n.children ? "tree" : "blob"}/master/flare/src/${n.ancestors().reverse().map(d => d.data.name).join("/")}${n.children ? "" : ".as"}`,
@@ -15,3 +15,5 @@ tree(flare, {
   tree: d3.cluster,
   width: 1152
 });
+
+d3.select('body').append(() => chart);

@@ -34,6 +34,8 @@ const chart = barChart(alphabet, {
   duration: 750 // slow transition for demonstration
 });
 
+d3.select('body').append(() => chart);
+
 const updateChart = () => {
   const order = dropdownData.get(d3.select('select[id="dropDownSelect"]').property('value'));
   chart.update(d3.sort(alphabet, order));

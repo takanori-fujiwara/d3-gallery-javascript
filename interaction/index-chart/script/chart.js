@@ -73,9 +73,7 @@ export const indexChart = (data, {
     .x(i => xScale(X[i]))
     .y((i, _, I) => yScale(Y[i] / Y[I[0]]));
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

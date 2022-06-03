@@ -7,7 +7,7 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/color-legend
 export const legend = (color, {
-  id = 'legend',
+  svgId = 'legend',
   title,
   tickSize = 6,
   width = 320,
@@ -32,10 +32,8 @@ export const legend = (color, {
     return canvas;
   }
 
-  d3.select('body').select(`svg#${id}`).remove();
-
-  const svg = d3.select('body').append('svg')
-    .attr('id', id)
+  const svg = d3.create('svg')
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])
@@ -152,6 +150,58 @@ export const legend = (color, {
       .attr('font-weight', 'bold')
       .attr('class', 'title')
       .text(title));
+
+  return svg.node();
+}
+
+export const swatches = (color, {
+  svgId = 'swatches',
+  nColumns = 10,
+  format,
+  unknown: formatUnknown,
+  swatchSize = 15,
+  swatchWidth = swatchSize,
+  swatchHeight = swatchSize,
+  textWidth = 100,
+  width = 800,
+  height = 44,
+  marginTop = 18,
+  marginLeft = 0,
+} = {}) => {
+  const unknown = formatUnknown == null ? undefined : color.unknown();
+  const unknowns = unknown == null || unknown === d3.scaleImplicit ? [] : [unknown];
+  const domain = color.domain().concat(unknowns);
+  if (format === undefined) format = x => x === unknown ? formatUnknown : x;
+
+  const svg = d3.create('svg')
+    .attr('id', svgId)
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .style('overflow', 'visible')
+    .style('display', 'block');
+
+  svg.append('g')
+    .selectAll('rect')
+    .data(color.domain())
+    .join('rect')
+    .attr('x', (d, i) => marginLeft + (i % nColumns) * (swatchWidth + textWidth))
+    .attr('y', (d, i) => marginTop + Math.floor(i / nColumns) * (swatchHeight + 10))
+    .attr('width', swatchWidth)
+    .attr('height', swatchHeight)
+    .attr('fill', color)
+    .text(d => d);
+
+  svg.append('g')
+    .selectAll('text')
+    .data(color.domain())
+    .join('text')
+    .attr('x', (d, i) => marginLeft + swatchWidth + (i % nColumns) * (swatchWidth + textWidth))
+    .attr('y', (d, i) => marginTop + swatchHeight / 2 + Math.floor(i / nColumns) * (swatchHeight + 10))
+    .attr('dx', 3)
+    .attr('dy', '.35em')
+    .style('vertical-align', 'middle')
+    .text(d => format(d));
 
   return svg.node();
 }

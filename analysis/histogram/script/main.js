@@ -7,10 +7,12 @@ import {
 
 const unemployment = await d3.csv('./data/unemployment-x.csv', d3.autoType);
 
-histogram(unemployment, {
+const chart = histogram(unemployment, {
   value: d => d.rate,
   label: "Unemployment rate (%) →",
   width: 1000,
   height: 500,
   color: "steelblue"
 });
+
+d3.select('body').append(() => chart);

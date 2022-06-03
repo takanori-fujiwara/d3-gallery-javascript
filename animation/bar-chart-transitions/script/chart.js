@@ -64,9 +64,7 @@ export const barChart = (data, {
     .attr('stroke', 'currentColor')
     .attr('stroke-opacity', 0.1);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

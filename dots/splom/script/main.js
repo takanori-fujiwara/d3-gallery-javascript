@@ -21,6 +21,7 @@ const chart = scatterplotMatrix(penguins, {
   z: d => d.species
 });
 
-d3.select('body').append(() => chart);
+const chartSwatches = swatches(chart.scales.color)
 
-swatches(chart.scales.color)
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);

@@ -2,7 +2,7 @@
 // Released under the BSD 3-Clause 'New' or 'Revised' License
 
 import {
-  chart
+  marimekkoChart
 } from './chart.js';
 
 const data = (await d3.csv('./data/sales.csv')).map(({
@@ -15,4 +15,6 @@ const data = (await d3.csv('./data/sales.csv')).map(({
   value: value
 }));
 
-chart(data);
+const chart = marimekkoChart(data);
+
+d3.select('body').append(() => chart);

@@ -10,7 +10,8 @@ const driving = await d3.csv('./data/driving.csv', d3.autoType);
 const button = d3.select('body').append('div').append('button').attr('type', 'button').text('Replay');
 
 const play = () => {
-  connectedScatterplot(driving, {
+  const chart = connectedScatterplot(driving, {
+    svgId: 'connected-scatterplot',
     x: d => d.miles,
     y: d => d.gas,
     title: d => d.year,
@@ -22,6 +23,8 @@ const play = () => {
     height: 720,
     duration: 5000 // for the intro animation; 0 to disable
   });
+  d3.select('#connected-scatterplot').remove();
+  d3.select('body').append(() => chart);
 }
 
 play();

@@ -23,18 +23,21 @@ dropDownSelect.selectAll('option')
   .property('selected', d => d === keysDefault);
 
 const updateChart = keyz => {
-  d3.select('#parallel-coordinates').remove();
-
   const chart = parallelCoordinates(data, {
     svgId: 'parallel-coordinates',
     keyz: keyz
   });
 
-  legend(chart.scales.z, {
+  const chartLegend = legend(chart.scales.z, {
+    svgId: 'chart-legend',
     title: keyz
   });
 
+  d3.select('#chart-legend').remove();
+  d3.select('#parallel-coordinates').remove();
+
   d3.select('body').append(() => chart);
+  d3.select('body').append(() => chartLegend);
 }
 
 // initial state

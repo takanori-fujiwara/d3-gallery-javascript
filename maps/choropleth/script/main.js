@@ -39,8 +39,9 @@ const chart = choropleth(unemployment, {
   height: 610
 });
 
-d3.select('body').append(() => chart);
-
-legend(chart.scales.color, {
+const chartLegend = legend(chart.scales.color, {
   title: 'Unemployment rate (%)'
 });
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);

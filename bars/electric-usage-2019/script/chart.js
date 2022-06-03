@@ -62,16 +62,13 @@ export const electricChart = (data, {
       `${f(d)} cases`;
   }
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr("viewBox", [0, 0, width, height])
     .style("background", "white");
 
   svg.append("g")
     .call(xAxis);
-
   svg.append("g")
     .call(yAxis);
 

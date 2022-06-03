@@ -7,7 +7,7 @@ import {
 
 const diamonds = await d3.csv('./data/diamonds.csv', d3.autoType);
 
-boxPlot(diamonds, {
+const chart = boxPlot(diamonds, {
   x: d => d.carat,
   y: d => d.price,
   xLabel: 'Carats →',
@@ -15,3 +15,5 @@ boxPlot(diamonds, {
   width: 1000,
   height: 500
 });
+
+d3.select('body').append(() => chart);

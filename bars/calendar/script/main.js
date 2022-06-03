@@ -10,9 +10,9 @@ import {
 } from './legend.js';
 
 const dropdownData = new Map([
-  ["Weekdays only", "weekday"],
-  ["Sunday-based weeks", "sunday"],
-  ["Monday-based weeks", "monday"],
+  ['Weekdays only', 'weekday'],
+  ['Sunday-based weeks', 'sunday'],
+  ['Monday-based weeks', 'monday'],
 ]);
 
 const select = d3.select('body').append('div').append('select');
@@ -32,15 +32,21 @@ const updateCalendar1 = (weekday) => {
     svgId: 'calendar1',
     x: d => d.Date,
     y: (d, i, data) => i > 0 ? (d.Close - data[i - 1].Close) / data[i - 1].Close : NaN, // relative change
-    yFormat: "+%", // show percent change on hover
+    yFormat: '+%', // show percent change on hover
     weekday: weekday,
   });
 
-  legend(chart.scales.color, {
-    title: "Daily change",
-    tickFormat: "+%",
+  const chartLegend = legend(chart.scales.color, {
+    svgId: 'chart-legend',
+    title: 'Daily change',
+    tickFormat: '+%',
     marginLeft: 40
   });
+
+  d3.select('#calendar1').remove();
+  d3.select('#chart-legend').remove();
+  d3.select('body').append(() => chart);
+  d3.select('body').append(() => chartLegend);
 
   return chart;
 }
@@ -52,6 +58,9 @@ const updateCalendar2 = (weekday) => {
     y: d => d.Volume,
     weekday: weekday,
   });
+
+  d3.select('#calendar2').remove();
+  d3.select('body').append(() => chart);
 
   return chart;
 }

@@ -14,10 +14,11 @@ const data = await d3.tsv('./data/walmart.tsv')
 
 const chart = hexbinMap(data, us);
 
-d3.select('body').append(() => chart);
-
-legend(chart.scales.color, {
+const chartLegend = legend(chart.scales.color, {
   title: 'Median opening year',
   tickValues: d3.utcYear.every(5).range(...chart.scales.color.domain()),
   tickFormat: d3.utcFormat('%Y')
 });
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);

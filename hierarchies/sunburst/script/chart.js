@@ -65,9 +65,7 @@ export const sunburst = (data, { // data is either tabular (array of objects) or
     .innerRadius(d => d.y0)
     .outerRadius(d => d.y1 - padding);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('viewBox', [
       marginRight - marginLeft - width / 2,

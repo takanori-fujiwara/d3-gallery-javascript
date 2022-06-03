@@ -46,9 +46,10 @@ const data = Object.assign(years.map((y, i) => Object.fromEntries([
 
 const chart = uSPopulationByState17901990(data, regionRank, regionByState);
 
-d3.select('body').append(() => chart);
-
-swatches(chart.scales.color, {
+const chartSwatches = swatches(chart.scales.color, {
   nColumns: 5,
   textWidth: 130
 });
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);

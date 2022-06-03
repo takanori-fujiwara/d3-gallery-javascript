@@ -7,8 +7,8 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/marimekko-chart
 
-export const chart = (data, {
-  svgId = 'chart',
+export const marimekkoChart = (data, {
+  svgId = 'marimekko-chart',
   width = 1000,
   height = 800,
   margin = {
@@ -37,9 +37,7 @@ export const chart = (data, {
 
   const root = treemap(data);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)

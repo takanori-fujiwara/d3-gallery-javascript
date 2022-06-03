@@ -58,7 +58,6 @@ export const icelandicPopulationByAge18412019 = (data, {
 
   svg.append('g')
     .call(xAxis);
-
   svg.append('g')
     .call(yAxis);
 

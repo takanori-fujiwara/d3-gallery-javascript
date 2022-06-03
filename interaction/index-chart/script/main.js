@@ -20,7 +20,10 @@ const chart = indexChart(indices, {
   height: 600
 });
 
-swatches(chart.scales.color)
+const chartSwatches = swatches(chart.scales.color);
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);
 
 // trigger
 d3.select(chart)

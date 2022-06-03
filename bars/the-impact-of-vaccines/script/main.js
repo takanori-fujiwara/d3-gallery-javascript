@@ -54,9 +54,11 @@ const vaccineData = await fetch('./data/vaccines.json')
 
 const chart = vaccineChart(vaccineData);
 
-legend(
-  chart.scales.color, {
-    title: "Measles cases per 100,000 people",
-    width: 360,
-    marginLeft: 30
-  })
+const chartLegend = legend(chart.scales.color, {
+  title: "Measles cases per 100,000 people",
+  width: 360,
+  marginLeft: 30
+})
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);

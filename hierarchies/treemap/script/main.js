@@ -30,6 +30,7 @@ dropDownSelect.selectAll('option')
 
 const updateChart = (tile) => {
   const chart = treemap(flare, {
+    svgId: 'treemap',
     path: d => d.name.replace(/\./g, '/'), // e.g., 'flare/animate/Easing'
     value: d => d?.size, // size of each node (file); null for internal nodes (folders)
     group: d => d.name.split('.')[1], // e.g., 'animate' in 'flare.animate.Easing'; for color
@@ -41,14 +42,22 @@ const updateChart = (tile) => {
     height: 1152
   });
 
+  const chartSwatches = swatches(chart.scales.color, {
+    svgId: 'swatches',
+    textWidth: 60
+  });
+
+  d3.select('#swatches').remove();
+  d3.select('#treemap').remove();
+  d3.select('body').append(() => chartSwatches);
+  d3.select('body').append(() => chart);
+
   return chart
 }
 
 // initial state
 const chart = updateChart(dropdownData[0]);
-swatches(chart.scales.color, {
-  textWidth: 60
-});
+
 
 // when updated
 dropDownSelect.on('change', () => {

@@ -68,7 +68,15 @@ d3.select('body').append(() => chart);
 // initial plot
 chart.update(d3.select('input[name="barType"]:checked').node().value);
 
+const interval = setInterval(() => {
+  const value = d3.select('input[name="barType"]:checked').node().value ===
+    'grouped' ? 'stacked' : 'grouped';
+  d3.select(`input[name="barType"][value=${value}]`).property('checked', true);
+  chart.update(d3.select('input[name="barType"]:checked').node().value);
+}, 3000);
+
 // when updated
 buttons.on('change', () => {
+  clearInterval(interval);
   chart.update(d3.select('input[name="barType"]:checked').node().value);
 });

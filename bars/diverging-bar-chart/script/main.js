@@ -22,7 +22,8 @@ buttons.append('label')
   .text(d => d);
 
 const updateChart = (metric) => {
-  barChart(data, {
+  const chart = barChart(data, {
+    svgId: 'bar-chart',
     x: metric === 'absolute' ? d => d[2019] - d[2010] : d => d[2019] / d[2010] - 1,
     y: d => d.State,
     yDomain: d3.groupSort(data, ([d]) => d[2019] - d[2010], d => d.State),
@@ -33,6 +34,9 @@ const updateChart = (metric) => {
     height: 800,
     colors: d3.schemeRdBu[3]
   });
+
+  d3.select('#bar-chart').remove();
+  d3.select('body').append(() => chart);
 }
 
 // initial state

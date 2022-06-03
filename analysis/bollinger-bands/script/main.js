@@ -47,7 +47,8 @@ sliderInputK
   .on('input', () => sliderInputK.attr('value'));
 
 const updateChart = (N, K) => {
-  bollingerChart(aapl, {
+  const chart = bollingerChart(aapl, {
+    svgId: 'bollinger-chart',
     x: d => d.date,
     y: d => d.close,
     N: N, // number of periods, per input above
@@ -56,6 +57,8 @@ const updateChart = (N, K) => {
     width: 1000,
     height: 600
   });
+  d3.select('#bollinger-chart').remove();
+  d3.select('body').append(() => chart);
 }
 
 // initial state

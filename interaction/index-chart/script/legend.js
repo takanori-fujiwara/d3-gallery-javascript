@@ -32,9 +32,7 @@ export const legend = (color, {
     return canvas;
   }
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
@@ -157,7 +155,7 @@ export const legend = (color, {
 }
 
 export const swatches = (color, {
-  id = 'swatches',
+  svgId = 'swatches',
   nColumns = 10,
   format,
   unknown: formatUnknown,
@@ -175,10 +173,8 @@ export const swatches = (color, {
   const domain = color.domain().concat(unknowns);
   if (format === undefined) format = x => x === unknown ? formatUnknown : x;
 
-  d3.select('body').select(`svg#${id}`).remove();
-
-  const svg = d3.select('body').append('svg')
-    .attr('id', id)
+  const svg = d3.create('svg')
+    .attr('id', svgId)
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', [0, 0, width, height])
@@ -205,7 +201,7 @@ export const swatches = (color, {
     .attr('dx', 3)
     .attr('dy', '.35em')
     .style('vertical-align', 'middle')
-    .text(d => d);
+    .text(d => format(d));
 
   return svg.node();
 }

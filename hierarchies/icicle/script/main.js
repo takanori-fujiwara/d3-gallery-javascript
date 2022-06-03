@@ -7,7 +7,7 @@ import {
 
 const flare = await d3.json('./data/flare.json', d3.autoType);
 
-icicle(flare, {
+const chart = icicle(flare, {
   value: d => d.size, // size of each node (file); null for internal nodes (folders)
   label: d => d.name, // display name for each cell
   title: (d, n) => `${n.ancestors().reverse().map(d => d.data.name).join(".")}\n${n.value.toLocaleString("en")}`, // hover text
@@ -16,3 +16,5 @@ icicle(flare, {
   width: 1152,
   height: 2400
 });
+
+d3.select('body').append(() => chart);

@@ -65,9 +65,7 @@ export const tree = (data, { // data is either tabular (array of objects) or hie
   // Compute the default height.
   if (height === undefined) height = x1 - x0 + dx * 2;
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('viewBox', [-dy * padding / 2, x0 - dx, width, height])
     .attr('width', width)

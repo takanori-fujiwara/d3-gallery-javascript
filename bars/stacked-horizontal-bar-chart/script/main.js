@@ -26,6 +26,9 @@ const chart = stackedBarChart(stateages, {
   height: 800
 });
 
-legend(chart.scales.color, {
+const chartLegend = legend(chart.scales.color, {
   title: 'Age (years)'
-})
+});
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);

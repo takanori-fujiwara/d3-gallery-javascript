@@ -84,4 +84,7 @@ const chart = stackedBarChart(politifact, {
   marginLeft: 70
 });
 
-swatches(chart.scales.color)
+const chartSwatches = swatches(chart.scales.color);
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartSwatches);

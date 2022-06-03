@@ -18,10 +18,13 @@ const electricData = await fetch('./data/pge-electric-data.csv')
 
 const chart = electricChart(electricData);
 
-legend(
+const chartLegend = legend(
   chart.scales.color, {
     title: "Net power consumption (kW)",
     tickFormat: "+d",
     width: 360,
     marginLeft: 30
-  })
+  });
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);

@@ -22,8 +22,9 @@ const data = Object.assign(d3.csvParse(await d3.text('./data/temperature.csv'), 
 
 const chart = gradientEncoding(data);
 
-d3.select('body').append(() => chart);
-
-legend(chart.scales.color, {
+const chartLegend = legend(chart.scales.color, {
   title: data.title === undefined ? data.y : data.title
 });
+
+d3.select('body').append(() => chart);
+d3.select('body').append(() => chartLegend);

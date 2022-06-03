@@ -83,9 +83,7 @@ export const treemap = (data, { // data is either tabular (array of objects) or 
     .round(round)
     (root);
 
-  d3.select('body').select(`svg#${svgId}`).remove();
-
-  const svg = d3.select('body').append('svg')
+  const svg = d3.create('svg')
     .attr('id', svgId)
     .attr('viewBox', [-marginLeft, -marginTop, width, height])
     .attr('width', width)
