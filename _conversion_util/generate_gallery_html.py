@@ -90,7 +90,10 @@ html_head = '''<html>
 </head>
 
 <body>
-  <h1>D3 Gallery (Vanilla JavaScript Implementation) (<a href='https://observablehq.com/@d3/gallery'>original observable code</a>)</h1>
+  <h1>D3 Gallery - Vanilla JavaScript Implementation (<a href='https://observablehq.com/@d3/gallery'>original observable code</a>)</h1>
+  <p>Source code is available on <a href='https://github.com/takanori-fujiwara/d3-gallery-javascript/'>GitHub</a>.
+  The original observable code is converted by <a href='https://takanori-fujiwara.github.io/'>Takanori Fujiwara</a> (Copyright 2022). </p>
+
 '''
 
 html_tail = '''</body>
