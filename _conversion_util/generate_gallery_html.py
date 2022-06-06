@@ -65,7 +65,7 @@ def gen_examples_html(category_key):
         html += f'''
       <div class='thumbnail'>
         <a href=\'{href}\'>
-          <img src='./_thumbnails/{thumbnail}.png'>
+          <img src='./thumbnails/{thumbnail}.png'>
           <p>{title}</p>
         </a>
       </div>

@@ -36,4 +36,5 @@ interaction - hexbin: slider
 interaction - hexbin-area: slider, dropdown
 analysis - bollinger-bands: text + slider
 maps - bivariate-choropleth: bivariate legend
+maps - projection-comparison: using canvas, assigning ID to canvas
 just-for-fun - psr-b1919-21: read csv as array
