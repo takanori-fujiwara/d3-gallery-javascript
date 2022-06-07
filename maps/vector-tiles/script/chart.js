@@ -26,7 +26,9 @@ export const vectorTiles = async ({
     .scale(projection.scale() * 2 * Math.PI)
     .translate(projection([0, 0]));
   const tiles = await Promise.all(tile().map(async d => {
-    d.data = await fetch(`https://tile.nextzen.org/tilezen/vector/v1/256/all/${d[2]}/${d[0]}/${d[1]}.json?api_key=${apiKey}`).then(response => response.json()); // Sign up for an API key: https://www.nextzen.org
+    d.data = await fetch(`https://tile.nextzen.org/tilezen/vector/v1/256/all/${d[2]}/${d[0]}/${d[1]}.json?api_key=${apiKey}`, {
+      mode: 'cors'
+    }).then(response => response.json()); // Sign up for an API key: https://www.nextzen.org
     return d;
   }));
 
