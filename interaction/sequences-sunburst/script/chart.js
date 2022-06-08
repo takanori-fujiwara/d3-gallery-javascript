@@ -210,6 +210,7 @@ export const breadcrumb = ({
     .attr('width', breadcrumbWidth * 10)
     .attr('height', breadcrumbHeight)
     .attr('viewBox', `0 0 ${breadcrumbWidth * 10} ${breadcrumbHeight}`)
+    .style('display', 'block')
     .style('font', '12px sans-serif')
     .style('margin', '5px');
 
