@@ -4,7 +4,7 @@ This repository aims to covert all observable examples (https://observablehq.com
 The converted examples can be checked at https://takanori-fujiwara.github.io/d3-gallery-javascript/.
 
 ## Note
-So far, 152 examples are implemented. Remaining 7 examples will be implemented gradually (only the examples with license declaration will be implemented).
+So far, 155 examples are implemented. Remaining 4 examples will be implemented gradually (only the examples with license declaration will be implemented).
 I also performed refactoring some part of source code to simplify and clarify the logic, etc.
 
 ## How to try example code on your machine
