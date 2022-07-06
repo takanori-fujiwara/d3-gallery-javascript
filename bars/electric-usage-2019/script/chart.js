@@ -31,19 +31,19 @@ export const electricChart = (data, {
   const X = d3.scaleBand(d3.range(24), [marginLeft, width - marginRight]).round(true);
   const Y = d3.scaleBand(d3.timeDays(...dateExtent), [marginTop, height - marginBottom]).round(true);
 
-  const formatHour = d => d === 0 ? "12 AM" : d === 12 ? "12 PM" : (d % 12) + "";
-  const formatDay = d => (d.getDate() === 1 ? d3.timeFormat("%b %-d") : d3.timeFormat("%-d"))(d);
-  const formatDate = d3.timeFormat("%B %-d, %-I %p");
-  const formatUsage = d3.format(".2f");
+  const formatHour = d => d === 0 ? '12 AM' : d === 12 ? '12 PM' : (d % 12) + '';
+  const formatDay = d => (d.getDate() === 1 ? d3.timeFormat('%b %-d') : d3.timeFormat('%-d'))(d);
+  const formatDate = d3.timeFormat('%B %-d, %-I %p');
+  const formatUsage = d3.format('.2f');
 
   const xAxis = g => g
-    .attr("transform", `translate(0,${marginTop})`)
+    .attr('transform', `translate(0,${marginTop})`)
     .call(d3.axisTop(X).tickFormat(formatHour))
-    .call(g => g.select(".domain").remove())
+    .call(g => g.select('.domain').remove())
   const yAxis = g => g
-    .attr("transform", `translate(${marginLeft},0)`)
+    .attr('transform', `translate(${marginLeft},0)`)
     .call(d3.axisLeft(Y).tickFormat(formatDay))
-    .call(g => g.select(".domain").remove())
+    .call(g => g.select('.domain').remove())
 
   const [min, max] = d3.extent(data, d => d.usage);
   if (colors === undefined) {
@@ -64,24 +64,26 @@ export const electricChart = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
-    .attr("viewBox", [0, 0, width, height])
-    .style("background", "white");
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .style('background', 'white');
 
-  svg.append("g")
+  svg.append('g')
     .call(xAxis);
-  svg.append("g")
+  svg.append('g')
     .call(yAxis);
 
-  svg.append("g")
-    .selectAll("rect")
+  svg.append('g')
+    .selectAll('rect')
     .data(data)
-    .join("rect")
-    .attr("x", d => X(d.date.getHours()))
-    .attr("y", d => Y(d3.timeDay(d.date)))
-    .attr("width", X.bandwidth() - 1)
-    .attr("height", Y.bandwidth() - 1)
-    .attr("fill", d => color(d.usage))
-    .append("title")
+    .join('rect')
+    .attr('x', d => X(d.date.getHours()))
+    .attr('y', d => Y(d3.timeDay(d.date)))
+    .attr('width', X.bandwidth() - 1)
+    .attr('height', Y.bandwidth() - 1)
+    .attr('fill', d => color(d.usage))
+    .append('title')
     .text(d => `${formatDate(d.date)}${formatUsage(d.usage)} kW`);
 
   return Object.assign(svg.node(), {

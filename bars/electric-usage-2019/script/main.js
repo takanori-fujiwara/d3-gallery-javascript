@@ -26,5 +26,5 @@ const chartLegend = legend(
     marginLeft: 30
   });
 
-d3.select('body').append(() => chart);
 d3.select('body').append(() => chartLegend);
+d3.select('body').append(() => chart);

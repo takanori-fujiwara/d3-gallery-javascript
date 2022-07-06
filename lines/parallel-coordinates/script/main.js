@@ -33,11 +33,11 @@ const updateChart = keyz => {
     title: keyz
   });
 
-  d3.select('#chart-legend').remove();
   d3.select('#parallel-coordinates').remove();
+  d3.select('#chart-legend').remove();
 
-  d3.select('body').append(() => chart);
   d3.select('body').append(() => chartLegend);
+  d3.select('body').append(() => chart);
 }
 
 // initial state

@@ -28,7 +28,7 @@ const chart = musicChart(musicData);
 const chartSwatches = swatches(chart.scales.color, {
   width: 1000,
   nColumns: 6,
-  textWidth: 250,
+  textWidth: 220,
   marginLeft: 30
 });
 

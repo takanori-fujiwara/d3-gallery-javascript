@@ -19,8 +19,8 @@
 
 export const vaccineChart = (data, {
   svgId = 'vaccine-chart',
-  width = 900,
-  height = 500,
+  width = 1200,
+  height = 700,
   marginTop = 20,
   marginRight = 40,
   marginBottom = 40,
@@ -71,6 +71,8 @@ export const vaccineChart = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
+    .attr('width', width)
+    .attr('height', height)
     .attr('viewBox', [0, 0, width, height + marginTop + marginBottom])
     .attr('font-family', 'sans-serif')
     .attr('font-size', 10);

@@ -52,7 +52,7 @@ export const dotPlot = (data, {
   const I = d3.range(X.length).filter(i => yDomain.has(Y[i]) && zDomain.has(Z[i]));
 
   // Compute the default height.
-  if (height === undefined) height = Math.ceil((yDomain.size + yPadding) * 16) + marginTop + marginBottom;
+  if (height === undefined) height = Math.ceil((yDomain.size + yPadding) * 12) + marginTop + marginBottom;
   if (yRange === undefined) yRange = [marginTop, height - marginBottom];
 
   // Chose a default color scheme based on cardinality.

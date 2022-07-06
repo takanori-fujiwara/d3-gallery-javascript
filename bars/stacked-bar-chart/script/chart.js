@@ -83,49 +83,49 @@ export const stackedBarChart = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [0, 0, width, height])
-    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .attr('style', 'max-width: 100%; height: auto; height: intrinsic;');
 
-  svg.append("g")
-    .attr("transform", `translate(${marginLeft},0)`)
+  svg.append('g')
+    .attr('transform', `translate(${marginLeft},0)`)
     .call(yAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.selectAll(".tick line").clone()
-      .attr("x2", width - marginLeft - marginRight)
-      .attr("stroke-opacity", 0.1))
-    .call(g => g.append("text")
-      .attr("x", -marginLeft)
-      .attr("y", 10)
-      .attr("fill", "currentColor")
-      .attr("text-anchor", "start")
+    .call(g => g.select('.domain').remove())
+    .call(g => g.selectAll('.tick line').clone()
+      .attr('x2', width - marginLeft - marginRight)
+      .attr('stroke-opacity', 0.1))
+    .call(g => g.append('text')
+      .attr('x', -marginLeft)
+      .attr('y', 10)
+      .attr('fill', 'currentColor')
+      .attr('text-anchor', 'start')
       .text(yLabel));
 
-  const bar = svg.append("g")
-    .selectAll("g")
+  const bar = svg.append('g')
+    .selectAll('g')
     .data(series)
-    .join("g")
-    .attr("fill", ([{
+    .join('g')
+    .attr('fill', ([{
       i
     }]) => color(Z[i]))
-    .selectAll("rect")
+    .selectAll('rect')
     .data(d => d)
-    .join("rect")
-    .attr("x", ({
+    .join('rect')
+    .attr('x', ({
       i
     }) => xScale(X[i]))
-    .attr("y", ([y1, y2]) => Math.min(yScale(y1), yScale(y2)))
-    .attr("height", ([y1, y2]) => Math.abs(yScale(y1) - yScale(y2)))
-    .attr("width", xScale.bandwidth());
+    .attr('y', ([y1, y2]) => Math.min(yScale(y1), yScale(y2)))
+    .attr('height', ([y1, y2]) => Math.abs(yScale(y1) - yScale(y2)))
+    .attr('width', xScale.bandwidth());
 
-  if (title) bar.append("title")
+  if (title) bar.append('title')
     .text(({
       i
     }) => title(i));
 
-  svg.append("g")
-    .attr("transform", `translate(0,${yScale(0)})`)
+  svg.append('g')
+    .attr('transform', `translate(0,${yScale(0)})`)
     .call(xAxis);
 
   return Object.assign(svg.node(), {

@@ -92,53 +92,53 @@ export const stackedBarChart = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [0, 0, width, height])
-    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height])
+    .attr('style', 'max-width: 100%; height: auto; height: intrinsic;');
 
-  svg.append("g")
-    .attr("transform", `translate(0,${marginTop})`)
+  svg.append('g')
+    .attr('transform', `translate(0,${marginTop})`)
     .call(xAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.selectAll(".tick line").clone()
-      .attr("y2", height - marginTop - marginBottom)
-      .attr("stroke-opacity", 0.1))
-    .call(g => g.append("text")
-      .attr("x", xScale(0))
-      .attr("y", -22)
-      .attr("fill", "currentColor")
-      .attr("text-anchor", "middle")
+    .call(g => g.select('.domain').remove())
+    .call(g => g.selectAll('.tick line').clone()
+      .attr('y2', height - marginTop - marginBottom)
+      .attr('stroke-opacity', 0.1))
+    .call(g => g.append('text')
+      .attr('x', xScale(0))
+      .attr('y', -22)
+      .attr('fill', 'currentColor')
+      .attr('text-anchor', 'middle')
       .text(xLabel));
 
-  const bar = svg.append("g")
-    .selectAll("g")
+  const bar = svg.append('g')
+    .selectAll('g')
     .data(series)
-    .join("g")
-    .attr("fill", ([{
+    .join('g')
+    .attr('fill', ([{
       i
     }]) => color(Z[i]))
-    .selectAll("rect")
+    .selectAll('rect')
     .data(d => d)
-    .join("rect")
-    .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)) ? Math.min(xScale(x1), xScale(x2)) : 0)
-    .attr("y", ({
+    .join('rect')
+    .attr('x', ([x1, x2]) => Math.min(xScale(x1), xScale(x2)) ? Math.min(xScale(x1), xScale(x2)) : 0)
+    .attr('y', ({
       i
     }) => yScale(Y[i]))
-    .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)) ? Math.abs(xScale(x1) - xScale(x2)) : 0)
-    .attr("height", yScale.bandwidth());
+    .attr('width', ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)) ? Math.abs(xScale(x1) - xScale(x2)) : 0)
+    .attr('height', yScale.bandwidth());
 
-  if (title) bar.append("title")
+  if (title) bar.append('title')
     .text(({
       i
     }) => title(i));
 
-  svg.append("g")
-    .attr("transform", `translate(${xScale(0)},0)`)
+  svg.append('g')
+    .attr('transform', `translate(${xScale(0)},0)`)
     .call(yAxis)
-    .call(g => g.selectAll(".tick text")
-      .attr("dx", -3)
-      .attr("x", y => { // Find the minimum x-value for the corresponding y-value.
+    .call(g => g.selectAll('.tick text')
+      .attr('dx', -3)
+      .attr('x', y => { // Find the minimum x-value for the corresponding y-value.
         const x = d3.min(series, S => S.find(d => Y[d.i] === y)?. [0]);
         return xScale(x) - xScale(0);
       }));

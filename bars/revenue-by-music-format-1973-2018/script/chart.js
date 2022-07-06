@@ -99,6 +99,8 @@ export const musicChart = (data, {
 
   const svg = d3.create('svg')
     .attr('id', svgId)
+    .attr('width', width)
+    .attr('height', height)
     .attr('viewBox', [0, 0, width, height]);
 
   svg.append('g')
