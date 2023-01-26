@@ -7,6 +7,8 @@ The converted examples can be checked at https://takanori-fujiwara.github.io/d3-
 All 157 examples are implemented (only the examples with license declaration will be implemented. And the examples in Essays will be implemented if requested).
 I also performed refactoring some part of source code to simplify and clarify the logic, etc.
 
+In addition, I am adding new original examples (e.g., text wrapping).
+
 ## How to try example code on your machine
 
 * Run some http server and load 'index.html'
